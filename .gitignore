@@ -1,0 +1,24 @@
+# Logic Miner Git Ignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Project Artifacts
+sandbox/
+logs/
+brain/
+*.txt
+*.md
+!README.md
+!NEXT_STEPS.md
+!ARCHITECTURE.md
+
+# IDE
+.vscode/
+.idea/
+.gemini/
+.agent/
