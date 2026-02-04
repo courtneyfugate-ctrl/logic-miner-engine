@@ -16,6 +16,8 @@ brain/
 !README.md
 !NEXT_STEPS.md
 !ARCHITECTURE.md
+!task.md
+!implementation_plan.md
 
 # IDE
 .vscode/
