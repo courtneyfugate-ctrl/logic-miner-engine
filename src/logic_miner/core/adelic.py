@@ -1,4 +1,83 @@
 import math
+import hashlib
+from collections import defaultdict
+
+class AdelicMapper:
+    """
+    Coordinates Multi-Verse Projections.
+    Uses random seed per prime to ensure rotational variance.
+    """
+    # Extended pool for Dynamic Manifold Sizing (V.21)
+    EXTENDED_POOL = [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+
+    def __init__(self, primes=[3, 5, 7], seed_prefix="DEFAULT"):
+        self.primes = primes
+        self.seed_prefix = seed_prefix
+        self.dimensions = 12
+
+    def _get_projection_sign(self, term, dim, prime):
+        key = f"{self.seed_prefix}_{prime}_{term}_{dim}"
+        h = int(hashlib.md5(key.encode()).hexdigest(), 16)
+        return 1 if h % 2 == 0 else -1
+
+    def compute_mappings(self, matrix, entities):
+        mappings = defaultdict(dict)
+        for p in self.primes:
+            for i, term in enumerate(entities):
+                bits = 0
+                row = matrix[i]
+                for d in range(self.dimensions):
+                    dot = 0.0
+                    for j, w in enumerate(row):
+                        if w > 0:
+                            neigh = entities[j]
+                            sign = self._get_projection_sign(neigh, d, p)
+                            dot += w * sign
+                    if dot >= 0: bits |= (1 << d)
+                mappings[term][p] = bits
+        return mappings
+
+    @staticmethod
+    def calculate_rpr(previous_set, current_set):
+        """
+        Root Preservation Rate: 
+        Ratio of surviving concepts relative to the simpler manifold.
+        """
+        if not previous_set: return 1.0
+        return len(current_set) / len(previous_set)
+
+class AdelicSolver:
+    """
+    Algebraic Solver for the Sheaf Protocol.
+    """
+    def __init__(self, primes=[3, 5, 7]):
+        self.primes = primes
+
+    def solve(self, matrix, entities, hints):
+        current = defaultdict(lambda: {p: 0 for p in self.primes})
+        # Hints are anchored (boosted)
+        for term, p_map in hints.items():
+            for p, val in p_map.items():
+                current[term][p] = val * p 
+
+        ent_idxs = {e: i for i,e in enumerate(entities)}
+        
+        # Iterative Diffusion / Relaxation
+        for _ in range(5):
+            for e in entities:
+                idx = ent_idxs[e]
+                row = matrix[idx]
+                for p in self.primes:
+                    sum_val = 0
+                    sum_w = 0
+                    for j, w in enumerate(row):
+                        if w > 0:
+                            neigh = entities[j]
+                            sum_val += current[neigh][p] * w
+                            sum_w += w
+                    if sum_w > 0:
+                        current[e][p] = int(sum_val / sum_w)
+        return current
 
 class AdelicIntegrator:
     """

@@ -17,7 +17,17 @@ The current Mahler score is indifferent to topological rooting for small graphs.
 *   **Constraint**: If Node $A$ has higher centrality (frequency/degree) than Node $B$, but $v_p(A) > v_p(B)$, the configuration is penalized.
 *   **Goal**: Force generalities (Phylum/Class) to the $p$-adic roots (lowest valuations).
 
-### 3. Restoration of Analytic Audits
+### 3. Parsimony-First RANSAC (Degree Collapse)
+The current solver fits a high-degree polynomial to *all* points (Signal + Noise).
+*   **Action**: Implement **True RANSAC** (Inlier Maximization) in `_optimize_mapping`.
+*   **Mechanism**:
+    1.  Select a random "Basis Set" of small size (e.g., $d=15$).
+    2.  Interpolate Polynomial $P(x)$ through this Basis.
+    3.  **Score**: Count "Inliers" (entities $e$ where $|P(coord(e))|_p$ is small).
+    4.  **Loop**: maximize the Inlier Count.
+*   **Result**: "Noise" words (like "Furthermore") will be rejected as Outliers because they don't fit the algebraic curve defined by the Biological Structure.
+
+### 4. Restoration of Analytic Audits
 *   **Action**: Fix the `analytic_score` and `lipschitz_violation` reporting to ensure every solved model has a verifiable "Proof of Truth."
 
 ## Proposed Changes

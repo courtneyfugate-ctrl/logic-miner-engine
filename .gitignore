@@ -8,7 +8,8 @@ venv/
 .env
 
 # Project Artifacts
-sandbox/
+sandbox/*
+!sandbox/*.py
 logs/
 brain/
 *.txt
@@ -18,6 +19,8 @@ brain/
 !ARCHITECTURE.md
 !task.md
 !implementation_plan.md
+texts/
+*.docx
 
 # IDE
 .vscode/

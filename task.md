@@ -18,9 +18,16 @@
 - [x] **Optimization**: SVO Pre-Processing (Phase V) <!-- id: 14 -->
 
 ## Phase 3: Recursive Discovery & Hierarchy
-- [/] **Discovery**: Recursive Re-Mapping Loop (Phase VIII) <!-- id: 15 -->
+- [x] **Discovery**: Recursive Re-Mapping Loop (Phase VIII) <!-- id: 15 -->
+- [x] **Optimization**: Protocol V.12 Spline Manifold (Solved Degree Collapse) <!-- id: 18 -->
+- [x] **Visualization**: Dashboard (Graphviz/Matplotlib/Plotly) <!-- id: 20 -->
+- [ ] **Architecture**: Protocol V.13 Sheaf Manifold (Multi-Prime + Curvature) <!-- id: 21 -->
+    - [ ] Adelic Embedding (p=3,5,7)
+    - [ ] Spline Curvature Filter
+    - [ ] P-adic Cone Tree Construction
 - [ ] **Audit**: Restore Mahler & Lipschitz Reporting <!-- id: 16 -->
 - [ ] **Technical**: True Hensel Lifting Implementation <!-- id: 17 -->
+- [x] **Audit**: Protocol V.10 Serial Synthesis Audit (Chemistry Textbook)
 
 ## **CRITICAL DIRECTIVE: ALGEBRAIC DISCOVERY (NON-IMPOSITION)**
 **VIOLATION DETECTED**: The current SVO Parser uses grammar to *assign* direction ($Subject \to Object$). This is forbidden.

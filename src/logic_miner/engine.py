@@ -87,48 +87,77 @@ class LogicMiner:
         # Legacy Numeric Pipeline
         return self.fit_numeric(inputs, outputs, min_consensus)
 
-    def fit_text(self, raw_text):
+    def fit_text(self, raw_text, use_adelic_shake=True, use_serial=True, reader=None):
         """
-        Mines semantic logic tree from raw text using Siloed Pre-processing.
-        1. Featurizer: Text -> Matrix (Unsupervised Structure).
-        2. Solver: Matrix -> Logic (Algebraic Discovery).
+        Mines semantic logic tree from raw text.
+        If use_serial=True and input is large, uses SerialManifoldSynthesizer (Splining).
         """
+        # Threshold for serial: 100k chars or presence of reader
+        if use_serial and (len(raw_text) > 100000 or reader):
+            print("   > Large Corpus Detected: Switching to Serial Spline Synthesis (V.22)...")
+            from .core.serial_synthesis import SerialManifoldSynthesizer
+            synthesizer = SerialManifoldSynthesizer(chunk_size=50)
+            result = synthesizer.fit_stream(text=raw_text, reader=reader)
+            
+            # Result synthesis for Serial
+            coords = result['coordinates']
+            labels = list(coords.keys())
+            p = result['p']
+            
+            # Derive distance matrix from p-adic coordinates d_p(x,y) = p^-v_p(x-y)
+            n = len(labels)
+            dist_matrix = [[0.0]*n for _ in range(n)]
+            for i in range(n):
+                for j in range(i+1, n):
+                    diff = abs(coords[labels[i]] - coords[labels[j]])
+                    if diff == 0:
+                        v = 100 # Infinity
+                    else:
+                        v = 0
+                        while diff % p == 0:
+                            diff //= p
+                            v += 1
+                    dist = p**(-v)
+                    dist_matrix[i][j] = dist_matrix[j][i] = dist
+            
+            tree_result = self.fit_ultrametric(dist_matrix, labels=labels, source_type='SERIAL_SYNTHESIS')
+            tree_result['spline_trace'] = result['spline_trace']
+            tree_result['anchors'] = result['anchors']
+            tree_result['p'] = result['p']
+            tree_result['classification'] = result.get('classification', {})
+            tree_result['entities'] = list(result['coordinates'].keys())
+            tree_result['coordinates'] = result['coordinates']
+            # For compatibility with audit script
+            tree_result['polynomial'] = result['spline_trace'][-1]['polynomial'] if result['spline_trace'] else []
+            return tree_result
+
         print("--- [Logic Miner] Detected Logic: Natural Language (Semantic Tree) ---")
         
-        # 1. Siloed Pre-processing (Featurization)
-        from .core.text_featurizer import TextFeaturizer
-        featurizer = TextFeaturizer()
-        
-        candidates = featurizer.extract_entities(raw_text)
-        print(f"   > Auto-Detected {len(candidates)} Atomic Entities (Phrase Filter).")
-        
-        if not candidates:
-            return {'mode': 'NOISE', 'note': 'No recurring entities found (Threshold > 1).'}
-            
-        matrix, counts = featurizer.build_association_matrix(raw_text, candidates)
-
-        # 2. Universal Solver (Algebraic Miner)
+        # ... (Monolithic path remains for small texts) ...
         from .core.algebraic_text import AlgebraicTextSolver
         solver = AlgebraicTextSolver(p=5, ransac_iterations=15) 
         
-        # Pass Abstract Mathematical Objects (Matrix, Set)
-        result = solver.solve(matrix, candidates, counts)
+        # Process Matrix for purified set
+        p_matrix, p_counts, _ = featurizer.build_association_matrix(raw_text, purified_candidates)
         
-        lift_energy = result['energy']
-        poly = result['polynomial']
-        print(f"   > Rectification Energy: {lift_energy:.4f}")
-        print(f"   > Defining Polynomial (Degree {len(poly)-1}): {poly}")
+        result = solver.solve(p_matrix, purified_candidates, p_counts)
+        
+        # 4. Process Hyper-Edges (Reactions)
+        from .core.process_graph import ProcessGraphExtractor
+        pge = ProcessGraphExtractor()
+        reactions = pge.extract_reactions(raw_text, purified_candidates)
+        if reactions:
+            print(f"   > Process Graph: Extracted {len(reactions)} Reaction Hyper-edges.")
 
-        # 3. Visualization (Secondary)
-        # We pass the rectified matrix to the visualizer to see the underlying tree
-        # But the 'Core Truth' is now the Polynomial.
-        tree_result = self.fit_ultrametric(result['matrix'], labels=candidates, source_type='ALGEBRAIC_TEXT')
-        tree_result['polynomial'] = poly
+        # 5. Result Synthesis
+        tree_result = self.fit_ultrametric(result['matrix'], labels=purified_candidates, source_type='ALGEBRAIC_TEXT')
+        tree_result['polynomial'] = result['polynomial']
         tree_result['coordinates'] = result['coordinates']
-        tree_result['complexities'] = result['complexities']
-        tree_result['energy'] = lift_energy
+        tree_result['classification'] = classifications
+        tree_result['reactions'] = reactions
+        tree_result['energy'] = result['energy']
         tree_result['analytic_score'] = result['analytic_score']
-        tree_result['lipschitz_violation'] = result.get('lipschitz_violation', 0.0)
+        
         return tree_result
 
 

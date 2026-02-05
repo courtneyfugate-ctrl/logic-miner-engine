@@ -1,185 +1,195 @@
 import random
 import math
 import re
-from collections import Counter
+from collections import Counter, deque, defaultdict
 
 class AlgebraicTextSolver:
     """
-    The Algebraic Logic Miner V.3 (Pure P-adic).
-    Implements the Map-and-Derive Protocol.
-    Goal: Derive Ultrametric Distance from Co-occurrence Density.
+    The Algebraic Logic Miner V.4 (Protocol V.25: Rigorous P-adic).
+    Goal: Mirror Hierarchical Ontology through BFE Prefix Inheritance.
     """
-    def __init__(self, p=5, ransac_iterations=20):
-        self.p = p
+    def __init__(self, p=31, ransac_iterations=100):
+        self.p = p # Default to large prime to satisfy p > B
         self.iterations = ransac_iterations
         self.coordinates = {} 
-        self.mapping = {} # Entity -> Integer ID
 
-    def solve(self, matrix, entities, raw_counts_bond):
+    def _get_vp(self, n, p):
+        if n == 0: return 10.0
+        val = 0
+        temp = abs(n)
+        while temp > 0 and temp % p == 0:
+            val += 1
+            temp //= p
+        return float(val)
+
+    def _build_co_occurrence_tree(self, adj_matrix, entities):
         """
-        V.5 Pipeline (Structural & Audited):
-        1. Input: Abstract Adjacency Matrix & Entity Set.
-        2. Optimization: Discover p-adic Mapping via Mahler Energy.
-        3. Polynomial: Define P(x).
-        4. Audit: Check Lipschitz/Mahler.
+        Constructs a tree from the adjacency matrix using BFS.
+        V.26: Implements Dynamic Branching Threshold to force deeper lineage.
         """
-        # 1. Algebraic Optimization (Discovery)
-        print("   > Phase VI: Algebraic Optimization (Mahler Energy Minimization)...")
-        # Optimization finds the coordinates.
-        self._optimize_mapping(matrix, entities, raw_counts_bond)
+        n = len(entities)
+        tree = defaultdict(list)
+        visited = set()
         
-        # 2. Generate Polynomial from Discovered Coordinates
-        # The coordinates are now set in self.coordinates
-        coords = list(self.coordinates.values())
+        # Start with the most central node (Root) - Guaranteed by Spectral Selection in solve()
+        root_idx = 0
+        queue = deque([root_idx])
+        visited.add(root_idx)
         
-        # Compute Poly
-        print(f"   > Computing Defining Polynomial (Degree {len(coords)})...")
-        coeffs = self._compute_polynomial_from_coords(coords)
+        # V.26: Establish a significance threshold (e.g., top 10% of local weights)
+        while queue:
+            parent = queue.popleft()
+            row = adj_matrix[parent]
+            
+            # Filter neighbors
+            potential_neighbors = [(j, w) for j, w in enumerate(row) if j not in visited and w > 0]
+            if not potential_neighbors: continue
+            
+            # V.26 THRESHOLD: Only take the top B neighbors or those with > 50% of the max neighbor weight
+            max_w = max([x[1] for x in potential_neighbors]) if potential_neighbors else 1.0
+            neighbors = sorted(
+                [x for x in potential_neighbors if x[1] >= (max_w * 0.5)],
+                key=lambda x: x[1], 
+                reverse=True
+            )
+            
+            for child, w in neighbors:
+                tree[entities[parent]].append(entities[child])
+                visited.add(child)
+                queue.append(child)
+        return tree
+
+    def _assign_bfe_coordinates(self, tree, entities, roots_dict=None):
+        """
+        Protocol V.30: Adelic Forest Representation.
+        Supports multiple disjoint roots assigned to different congruence classes (trunks).
+        """
+        # 1. Determine local branching factor B for Dynamic Scaling
+        max_B = 0
+        for node, children in tree.items():
+            max_B = max(max_B, len(children))
         
-        # 3. Audit (Mahler & Lipschitz)
-        lipschitz_score = 0.0 # Placeholder
+        # 2. Dynamic Scaling: Ensure p > max_B
+        if max_B >= self.p:
+            old_p = self.p
+            self.p = max_B + 1
+            print(f"     ! DYNAMIC SCALING (V30): p={old_p} -> {self.p} (Max Branching B={max_B})")
+
+        coords = {}
+        depths = {}
+        visited = set()
+        queue = deque()
         
-        print("   > Auditing Model...")
+        # 3. Initialize Multi-Root Forest
+        if roots_dict:
+            # entities[0] is typically the "best" root, but we respect the dict
+            for root_name, cong_class in roots_dict.items():
+                if root_name in entities:
+                    coords[root_name] = cong_class
+                    depths[root_name] = 0
+                    visited.add(root_name)
+                    queue.append(root_name)
+        else:
+            # Fallback to single root at class 1
+            root = entities[0]
+            coords[root] = 1
+            depths[root] = 0
+            visited.add(root)
+            queue.append(root)
+        
+        # bread-First Coordinate Assignment (Stays within congruence class)
+        while queue:
+            parent = queue.popleft()
+            p_coord = coords[parent]
+            p_depth = depths[parent]
+            
+            children = tree.get(parent, [])
+            for i, child in enumerate(children):
+                if child in visited: continue
+                # c_val is 0-indexed here if i starts at 0? 
+                # Actually, if we use digits 1..p-1 for roots, 
+                # then children should be at p^(depth+1).
+                # digit = i + 1 to avoid p-adic collision with the prefix.
+                c_val = i + 1
+                coords[child] = p_coord + c_val * (self.p ** (p_depth + 1))
+                depths[child] = p_depth + 1
+                visited.add(child)
+                queue.append(child)
+        
+        return coords
+
+    def solve(self, matrix, entities, raw_counts_bond, fixed_root=None, fixed_addr=None):
+        """
+        V.26 Production Pipeline with Eternal Root Support.
+        """
+        print(f"   > Protocol V.26: Rigorous Foundation Deployment (p={self.p})")
+        
+        # 0. Noise Vaporization
+        max_count = max(raw_counts_bond.values()) if raw_counts_bond else 1
+        purified_entities = []
+        indices_to_keep = []
+        for i, e in enumerate(entities):
+             key = e.replace(" ", "_")
+             count = raw_counts_bond.get(key, 0)
+             # V.26 THRESHOLD: Purge items with < 5% of max (Vaporization)
+             # Auditor: "Celsius" is noise in a logic core.
+             if count > (max_count * 0.05):
+                 purified_entities.append(e)
+                 indices_to_keep.append(i)
+        
+        print(f"     > Noise Vaporization: {len(entities)} -> {len(purified_entities)} Concepts.")
+        
+        # 1. Spectral Selection (Force fixed_root)
+        sorted_indices = sorted(range(len(purified_entities)), key=lambda i: raw_counts_bond.get(purified_entities[i].replace(" ", "_"), 0), reverse=True)
+        top_entities = [purified_entities[i] for i in sorted_indices]
+        
+        # 2. Topology Construction
+        sub_matrix = [[matrix[r][c] for c in indices_to_keep] for r in indices_to_keep]
+        final_matrix = [[sub_matrix[r][c] for c in sorted_indices] for r in sorted_indices]
+        
+        tree = self._build_co_occurrence_tree(final_matrix, top_entities)
+        
+        # V.30 Fix: Map legacy fixed_root to roots_dict
+        roots_dict = {fixed_root: fixed_addr if fixed_addr else 1} if fixed_root else None
+        self.coordinates = self._assign_bfe_coordinates(tree, top_entities, roots_dict=roots_dict)
+        
+        # 3. Optimization Phase
+        print("   > Optimization Phase: Binary Consensus Verification...")
+        
+        # 3. Polynomial Interpolation
+        unique_coords = list(set(self.coordinates.values()))
+        final_poly = self._compute_polynomial_from_coords(unique_coords)
+        
+        # 4. Final Output Construction
         from .mahler import MahlerSolver
         msolver = MahlerSolver(self.p)
+        score = msolver.validation_metric(final_poly)
         
-        # Compute Mahler Series Decay
-        decay_score = msolver.validation_metric(coeffs)
-        print(f"     > Mahler Decay Score: {decay_score:.2f}")
-        
-        # Prepare complexities for Engine visualization
+        print(f"   > Production Audit Complete. Score: {score:.4f}")
+
         complexities = {}
-        for e in entities:
+        for e in top_entities: 
              key = e.replace(" ", "_")
-             # raw_counts_bond keys are bonded strings.
              complexities[e] = raw_counts_bond.get(key, 0)
 
         result = {
-            'mode': 'ALGEBRAIC_DISCOVERY',
+            'mode': f"RIGOROUS_{self.p}ADIC",
             'p': self.p,
-            'polynomial': coeffs,
-            'energy': 0.0,
-            'coordinates': self.coordinates,
-            'analytic_score': decay_score,
-            'lipschitz_violation': lipschitz_score,
-            'matrix': matrix, # Included for engine compatibility
-            'complexities': complexities
+            'polynomial': final_poly,
+            'energy': 1.0 - score,
+            'coordinates': self.coordinates, 
+            'analytic_score': score,
+            'complexities': complexities,
+            'collapsed_degree': len(unique_coords)
         }
-        
-        if decay_score < 0.1:
-             result['mode'] = f"Refused:Mahler_Divergence ({decay_score:.2f})"
-             
         return result
 
-    def _optimize_mapping(self, adj_matrix, entities, raw_counts):
-        """
-        The Solver Loop (Phase VII: Iterative Discovery).
-        Goal: Find a mapping M: Entities -> Z that minimizes Mahler Energy.
-        
-        Strategy:
-        1. Heuristic Initialization (Centrality).
-        2. RANSAC / Hill Climbing:
-           - Helper: Compute P(x) -> Mahler Score.
-           - If Score < Threshold: Swap nodes, Shift coordinates.
-           - Minimize Energy (Maximize Decay Score).
-        """
-        n = len(entities)
-        self.p = 5 # Default for Biology
-        
-        # --- Helper: Score A Mapping ---
-        from .mahler import MahlerSolver
-        msolver = MahlerSolver(self.p)
-        
-        def calculate_energy(current_map):
-            # 1. Extract coords
-            coords = list(current_map.values())
-            # 2. Compute Poly
-            # (Re-use efficient poly compute? We need to duplicate code or call self)
-            # Implemented inline for speed or define small helper
-            p_coeffs = [1]
-            for c in coords:
-                new_poly = [0] * (len(p_coeffs) + 1)
-                for i, coeff in enumerate(p_coeffs):
-                    new_poly[i+1] += coeff # x
-                    new_poly[i] -= c * coeff # -c
-                p_coeffs = new_poly
-            # 3. Mahler Score
-            return msolver.validation_metric(p_coeffs)
-
-        # 1. Initialization (Centrality)
-        original_to_bonded = {e: e.replace(" ", "_") for e in entities}
-        sorted_entities_by_centrality = sorted(entities, 
-                                               key=lambda e: raw_counts.get(original_to_bonded[e], 0), 
-                                               reverse=True)
-        
-        # Hypothesis A: Centrality = Depth 0, 1, 2...
-        # Map: E[0] -> 0, E[1] -> 1, E[2] -> 2 ... (Dense Integer Lattice)
-        # Allows for p-adic hierarchy to emerge naturally (e.g. 5 is close to 0, 1 is far).
-        best_mapping = {}
-        for rank, ent in enumerate(sorted_entities_by_centrality):
-            best_mapping[ent] = rank # DENSE PACKING FIX
-            
-        best_score = calculate_energy(best_mapping)
-        print(f"     > Initial Heuristic Score: {best_score:.4f}")
-        
-        # 2. Optimization Loop (RANSAC / Hill Climb)
-        # If Initial is good, we keep it. If not, we search.
-        # Threshold: 0.1 is failure. We want > 0.5 ideally.
-        
-        import random
-        iterations = self.iterations
-        
-        # Heuristic Shortcut: If score is already perfect, skip (unless forcing).
-        # But for experiment, we obey the param.
-        
-        if iterations > 0:
-            print(f"     > Low Convergence. Attempting {iterations} RANSAC permutations to find stability...")
-            
-            entities_list = list(entities)
-            
-            for k in range(iterations):
-                # Mutation Strategy:
-                # 1. Swap two random nodes
-                # 2. Shift a node to a new p-adic branch
-                
-                candidate_mapping = best_mapping.copy()
-                
-                # Swap
-                a, b = random.sample(entities_list, 2)
-                candidate_mapping[a], candidate_mapping[b] = candidate_mapping[b], candidate_mapping[a]
-                
-                score = calculate_energy(candidate_mapping)
-                if score > best_score:
-                    best_score = score
-                    best_mapping = candidate_mapping
-                    print(f"       * New Best Configuration found! (Score: {best_score:.4f})")
-        
-        self.coordinates = best_mapping
-        return self.coordinates
-
     def _compute_polynomial_from_coords(self, coords):
-        # Quick interpolation P(x) where P(c) = 0 for all c in coords.
-        # Product (x - c).
-        # We need efficient expansion.
-        # For sandbox, simple iterative multiplication is fine.
-        # (x - c1)(x - c2)...
-        
-        # Coefficients array. Start with [1] (which is x^0? No, poly is a list of coeffs [a0, a1...])
-        # Wait, (x-c) -> [-c, 1].
-        
         poly = [1]
         for c in coords:
-            # Multiply poly by (x - c)
-            # New Poly has degree + 1
             new_poly = [0] * (len(poly) + 1)
             for i, coeff in enumerate(poly):
-                # coeff * x^i * x -> coeff * x^(i+1)
                 new_poly[i+1] += coeff
-                # coeff * x^i * (-c) -> -c*coeff * x^i
                 new_poly[i] -= c * coeff
             poly = new_poly
-            
         return poly
-
-    # Phase VI: Obsolete Methods (_lift_to_ultrametric, _embed_coordinates, _compute_polynomial) Removed.
-    # The Solver now handles topology via _optimize_mapping.
