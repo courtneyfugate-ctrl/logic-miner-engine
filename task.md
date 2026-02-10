@@ -5,6 +5,8 @@
 2.  **Universal Input**: The Engine accepts only **Abstract Mathematical Objects** (Matrices, Vectors, Integer Sets). It has NO knowledge of "Words", "Verbs", or "English".
 3.  **Discovery Check**: Structure (Direction, Hierarchy) must match the **Algebraic Convergence** (Mahler Decay), never imposed by the Pre-processor.
 4.  **Immutable Core**: The Solver logic (`fit`) must be generic.
+5.  **Strict Siloed Protocol**: Work on either Text Processing OR the Algebraic Engine. NEVER modify both in a single task unless strictly required for interface compatibility. 
+6.  **Core Integrity Alert**: Immediately notify the USER if any proposed change reduces or removes core theoretical components (RANSAC, Hensel Lifting, Ultrametric Core).
 
 - [x] Refactor `algebraic_text.py` (Purge NCD, Add Mapper) <!-- id: 6 -->
 - [x] Create `test_pure_padic.py` (Verify Derived Distance) <!-- id: 7 -->

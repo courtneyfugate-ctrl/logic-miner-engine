@@ -149,10 +149,14 @@ class PrimeSelector:
             # --- Depth Probe (Stability Check) ---
             if l0_score > 0.4:
                 from .lifter import HenselLifter
-                probe = HenselLifter(p).lift(inputs, outputs, max_depth=2, min_consensus=0.3)
+                probe_branches = HenselLifter(p).lift(inputs, outputs, max_depth=2, min_consensus=0.3)
                 
-                if probe['status'] == 'CONVERGED':
-                    l1_score = probe.get('final_consensus', 0)
+                # Check if any branch converged
+                if probe_branches:
+                    # Use the best branch for stability score
+                    best_branch = max(probe_branches, key=lambda b: b.get('final_consensus', 0))
+                    l1_score = best_branch.get('final_consensus', 0)
+                    
                     if l1_score < l0_score * 0.8 and l0_score > 0.85:
                          # Model degraded significantly at L1 -> Likely Strictly Modular (e.g. Parity)
                          final_score = l0_score * 0.95
@@ -173,7 +177,11 @@ class PrimeSelector:
             adj_score = 0.0
             if p > 1:
                 chance = 1.0 / p
-                adj_score = (final_score - chance) / (1.0 - chance)
+                # Newton Weighting: Stability of the valuation slope
+                # If slope is exactly 0.0 (flat), we penalize slightly as it's likely 'blur'
+                slope = result.get('valuation_slope', 0.0)
+                newton_weight = 1.1 if abs(slope) > 0.1 else 0.9
+                adj_score = ((final_score - chance) / (1.0 - chance)) * newton_weight
                 
             print(f"  > Testing p={p}: Raw={final_score:.2f} -> Adj={adj_score:.2f}")
             

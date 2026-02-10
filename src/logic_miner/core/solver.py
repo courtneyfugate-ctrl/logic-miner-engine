@@ -1,4 +1,5 @@
 import random
+import math
 import concurrent.futures
 
 class ModularSolver:
@@ -146,6 +147,40 @@ class ModularSolver:
             
         return None
 
+    def _calculate_newton_slope(self, inliers):
+        """
+        [RESTORED] Analyzing the Newton Polygon of the Mahler expansion.
+        The slope of the lower convex hull of (k, v_p(a_k)) defines ramification.
+        """
+        if not inliers or len(inliers) < 3: return 0.0, []
+        
+        # 1. Compute Mahler Coefficients for the inlier set
+        # We sample up to 15 points to keep it efficient
+        sample = inliers[:15]
+        xs = [float(d[0]) for d in sample]
+        ys = [float(d[1]) for d in sample]
+        
+        from .mahler import MahlerSolver
+        msolver = MahlerSolver(self.p)
+        coeffs = msolver.compute_coefficients(xs, ys, max_degree=len(sample)-1)
+        
+        # 2. Calculate Valuations v_p(a_k)
+        def vp(n):
+            if abs(n) < 1e-9: return 10.0
+            # For Mahler coeffs, we look at the denominator-adjusted valuation
+            # or simply the integer valuation if we can.
+            # Here we use a log-based proxy for p-adic magnitude.
+            return -math.log(abs(n), self.p) if abs(n) > 0 else 10.0
+
+        v_profile = [vp(c) for c in coeffs]
+        
+        # 3. Calculate Slope of the Hull
+        # Simple linear fit of the valuations (proxy for lower convex hull slope)
+        if len(v_profile) < 2: return 0.0, v_profile
+        
+        slope = (v_profile[-1] - v_profile[0]) / (len(v_profile) - 1)
+        return slope, v_profile
+
     def ransac_iterative(self, data, min_size=5, min_ratio=0.5):
         """
         Multimodal RANSAC (Iterative Peeling).
@@ -181,8 +216,11 @@ class ModularSolver:
                  break
                  
             # Store Layer
-            # Add metadata 'layer_index'
+            # Add metadata 'layer_index' and Newton Metrics
             res['layer_index'] = layer_idx
+            slope, profile = self._calculate_newton_slope(res['inliers'])
+            res['valuation_slope'] = slope
+            res['newton_profile'] = profile
             layers.append(res)
             
             # Peel
@@ -419,9 +457,12 @@ class ModularSolver:
             if len(current_inliers) > len(best_inliers):
                 best_inliers = current_inliers
                 best_model = model
-
+            
+        slope, profile = self._calculate_newton_slope(best_inliers)
         return {
             'model': best_model,
             'inliers': best_inliers,
-            'ratio': len(best_inliers) / len(data) if data else 0
+            'ratio': len(best_inliers) / len(data) if data else 0,
+            'valuation_slope': slope,
+            'newton_profile': profile
         }

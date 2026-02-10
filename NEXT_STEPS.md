@@ -2,6 +2,9 @@
 
 ## Technical Objectives (Fixing "Flat Logic")
 
+> [!CAUTION] 
+> **NON-ARCHIMEDEAN CONSTRAINT**: All future steps must strictly avoid Archimedean concepts (Gradients, Probability, Cosine Distance). We operate in $p$-adic space ($\max(a,b) \ge c$).
+
 1.  **[ ] Verify Dense Packing Convergence**: 
     *   Run `sandbox/test_deep_mammalia.py`.
     *   **Success Metric**: `Mammalia` at $0$, `Eutheria` at $5$, `Platypus` at $1$. 

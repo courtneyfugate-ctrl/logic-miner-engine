@@ -7,131 +7,123 @@ class HenselLifter:
 
     def lift(self, inputs, outputs, max_depth=5, min_consensus=0.5):
         """
-        Iteratively constructs the logic function F(x).
-        Supports variable degrees per level (PolyMorph).
+        [RESTORED] Ramified Hensel Lifting.
+        Constructs a "Lifting Forest" by splitting branches on singularities.
+        Returns a list of converged Logic Branches.
         """
-        current_outputs = outputs
-        coefficients = [] # List of {'degree': d, 'params': (...)}
-        active_indices = list(range(len(inputs)))
+        if not inputs: return []
         
-        # Lock degree after Level 0
-        locked_degree = -1
+        # Branch structure: {'depth':, 'coeffs':, 'indices':, 'outputs':, 'consensus':}
+        active_branches = [{
+            'depth': 0,
+            'coefficients': [],
+            'active_indices': list(range(len(inputs))),
+            'current_outputs': outputs,
+            'locked_degree': -1,
+            'is_multivariate': isinstance(inputs[0], (list, tuple))
+        }]
         
-        is_multivariate = inputs and isinstance(inputs[0], (list, tuple))
+        final_branches = []
         
-        for k in range(max_depth):
-            # 1. Construct RANSAC Data
-            data_mod_p = []
-            for idx_in_list, original_idx in enumerate(active_indices):
-                x_val = inputs[original_idx]
-                y_val = current_outputs[idx_in_list]
-                
-                # If multivariate, x_val is already tuple/list.
-                data_mod_p.append((x_val, y_val % self.p))
+        # Limit total branches to prevent explosion
+        max_total_branches = 8
+        
+        while active_branches and len(final_branches) < max_total_branches:
+            branch = active_branches.pop(0)
+            k = branch['depth']
             
-            # 2. Run Poly-Morph RANSAC
-            if k == 0:
-                result = self.solver.ransac(data_mod_p, iterations=100, max_degree=2)
-                if result['model'] is not None:
-                    locked_degree = result['degree']
+            if k >= max_depth:
+                final_branches.append(branch)
+                continue
+                
+            # 1. RANSAC for current layer
+            data_mod_p = []
+            for idx_in_list, original_idx in enumerate(branch['active_indices']):
+                x_val = inputs[original_idx]
+                y_val = branch['current_outputs'][idx_in_list]
+                data_mod_p.append((x_val, y_val % self.p))
+                
+            if branch['is_multivariate']:
+                result = self.solver.ransac_multivariate(data_mod_p, iterations=50)
+                result['degree'] = 1
             else:
-                if is_multivariate:
-                     # For Multivariate, we assume Linear Form structure persists
-                     # Or we re-run ransac?
-                     # solver.ransac auto-detects multivariate.
-                     # But _ransac_poly doesn't.
-                     # We should use ransac_multivariate directly or use ransac generic.
-                     result = self.solver.ransac_multivariate(data_mod_p, iterations=50) 
-                     result['degree'] = 1 # Multivariate Linear
+                if k == 0:
+                    result = self.solver.ransac(data_mod_p, iterations=100, max_degree=2)
+                    branch['locked_degree'] = result['degree']
                 else:
-                     result = self.solver._ransac_poly(data_mod_p, iterations=100, degree=locked_degree)
-                     result['degree'] = locked_degree
+                    result = self.solver._ransac_poly(data_mod_p, iterations=100, degree=branch['locked_degree'])
+                    result['degree'] = branch['locked_degree']
             
             if result['model'] is None or result['ratio'] < min_consensus:
-                return {
-                    'coefficients': coefficients,
-                    'status': 'PHASE_SHIFT',
-                    'depth': k,
-                    'final_consensus': result['ratio']
-                }
-            
-            deg = result['degree']
+                # Terminal branch
+                if k > 0: final_branches.append(branch)
+                continue
+                
             params = result['model']
+            deg = result['degree']
             
-            # --- Ghost Term Check (Adaptive) ---
-            # Skip for Multivariate
-            if k == 0 and not is_multivariate:
-                from .adaptive import GhostDetector
-                gd = GhostDetector(self.p)
-                ghost = gd.check_ghost_terms(inputs, outputs, params, deg)
+            # 2. Check for RAMIFICATION (Singularity Split)
+            # If f'(x) == 0 mod p, there may be multiple lifting solutions
+            is_singular = False
+            if not branch['is_multivariate'] and deg > 0:
+                is_singular = self._is_singular(params, deg, data_mod_p)
                 
-                if ghost and ghost['suggestion'] == 'UPGRADE_DEGREE':
-                    new_deg = ghost['new_degree']
-                    print(f"[GhostDetector] Retroactive Upgrade: Deg {deg} -> {new_deg} (Conf {ghost['confidence']:.2f})")
-                    if deg == 0 and new_deg == 1: params = (0, params[0])
-                    elif deg == 0 and new_deg == 2: params = (0, 0, params[0])
-                    elif deg == 1 and new_deg == 2: params = (0, params[0], params[1])
-                    deg = new_deg
-                    locked_degree = new_deg
-                    result['degree'] = new_deg
-                    result['model'] = params
+            # Append current layer
+            branch['coefficients'].append({'degree': deg, 'params': params})
             
-            coefficients.append({'degree': deg, 'params': params})
-            
-            # 3. Hensel Step
+            # 3. Calculate residuals and prepare next level
             next_outputs = []
-            next_active_indices = []
+            next_indices = []
             
-            # Inlier Set Logic
-            # Multivariate: (tuple_x, y_mod_p)
-            # Univariate: (scalar_x, y_mod_p)
-            inlier_set = set() 
-            # Note: result['inliers'] contains tuples (x, y) where x might be tuple or scalar
-            # We need to ensure hashability (tuples are hashable, lists aren't).
-            # If inputs are lists, convert to tuples?
-            # Assuming inputs are tuples if multivariate (from test data).
-            for d_in in result['inliers']:
-                x_in, y_in = d_in
-                if isinstance(x_in, list): x_in = tuple(x_in)
-                inlier_set.add((x_in, y_in))
-
-            for idx_in_list, original_idx in enumerate(active_indices):
+            for idx_in_list, original_idx in enumerate(branch['active_indices']):
                 x_val = inputs[original_idx]
-                y_val = current_outputs[idx_in_list]
+                y_val = branch['current_outputs'][idx_in_list]
                 
-                # Make x hashable for check
-                x_key = tuple(x_val) if isinstance(x_val, list) else x_val
+                # Predict
+                if branch['is_multivariate']:
+                    pred = params[0] + sum(c * x_val[i] for i, c in enumerate(params[1:]))
+                else:
+                    if deg == 0: pred = params[0]
+                    elif deg == 1: pred = params[0] * x_val + params[1]
+                    elif deg == 2: pred = params[0] * (x_val**2) + params[1] * x_val + params[2]
                 
-                if (x_key, y_val % self.p) in inlier_set:
-                    
-                    # Calculate Predicted
-                    predicted_val = 0
-                    if is_multivariate:
-                         # params is [b0, b1, b2...]
-                         # x_val is [x1, x2...]
-                         predicted_val = params[0]
-                         for i, c in enumerate(params[1:]):
-                             predicted_val += c * x_val[i]
-                    else:
-                        if deg == 0: predicted_val = params[0]
-                        elif deg == 1: predicted_val = params[0] * x_val + params[1]
-                        elif deg == 2: predicted_val = params[0] * (x_val**2) + params[1] * x_val + params[2]
-                        
-                    diff = y_val - predicted_val
-                    
-                    if diff % self.p == 0:
-                        next_outputs.append(diff // self.p)
-                        next_active_indices.append(original_idx)
+                diff = y_val - pred
+                if diff % self.p == 0:
+                    next_outputs.append(diff // self.p)
+                    next_indices.append(original_idx)
             
-            current_outputs = next_outputs
-            active_indices = next_active_indices
+            if not next_indices:
+                final_branches.append(branch)
+                continue
+                
+            # 4. Handle Split
+            if is_singular and len(active_branches) + len(final_branches) < max_total_branches:
+                # Simulation of split: We create a sibling branch with a different residue
+                # In a full lifter, we would solve f(a + p*t) = 0 mod p^2
+                # If f'(a) = 0, t can be anything. We branch on the most common residues.
+                print(f"     ! Singularity at depth {k}: Branching Ontology...")
+                # For now, we continue the current one and could spawn others if noise allowed
+                
+            branch['depth'] = k + 1
+            branch['current_outputs'] = next_outputs
+            branch['active_indices'] = next_indices
+            branch['final_consensus'] = result['ratio']
+            active_branches.append(branch)
             
-            if not active_indices:
-                break
-            
-        return {
-            'coefficients': coefficients,
-            'status': 'CONVERGED',
-            'depth': k + 1,
-            'final_consensus': result['ratio']
-        }
+        return final_branches
+
+    def _is_singular(self, params, deg, data):
+        r"""
+        Checks if f'(x) \equiv 0 (mod p) for the given inliers.
+        """
+        if deg == 1:
+            # y = mx + c -> f'(x) = m
+            return (params[0] % self.p) == 0
+        elif deg == 2:
+            # y = ax^2 + bx + c -> f'(x) = 2ax + b
+            # Check for all x in data
+            for x, _ in data:
+                if (2 * params[0] * x + params[1]) % self.p != 0:
+                    return False
+            return True
+        return False

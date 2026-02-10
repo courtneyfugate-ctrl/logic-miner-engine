@@ -1,46 +1,52 @@
-# Implementation Plan: Phase VIII - Valuation Discovery (Hierarchy Reconstruction)
+# Implementation Plan: Protocol V.13 - Sheaf Manifold & Adelic Verification
 
 ## Goal
-To resolve the "Flat Logic" issue where disparate levels of taxonomy (Phylum, Class, Species) currently share the same $p$-adic valuation. We must "unfold" the coordinate space to restore vertical depth.
+Implement **Protocol V.13 Sheaf Manifold** to enforce rigorous logic verification across sliding windows. This replaces "averaging" with **Sheaf Splining**, where local logical structures (defined on open sets/windows) must agree *exactly* on their intersections (overlaps) to be glued into a global section (Global Truth).
+
+## User Review Required
+> [!IMPORTANT]
+> **Rigid Lock Enforcement**: This change introduces a strict "Reject" policy. If logic derived from Window A and Window B disagrees on the overlapping text, the link is **discarded**, not averaged. This may reduce the quantity of output but drastically increases quality/rigour.
 
 ## Technical Objectives
 
-### 1. Coordinate Unfolding (Hensel-Basis Mapping)
-Currently, the solver uses a Dense Integer Basis ($0, 1, 2, 3...$). This causes "Coordinate Congestion."
-*   **Action**: Modify the Mapping Strategy in `AlgebraicTextSolver`.
-*   **Mechanism**: Allow the RANSAC loop to explore mappings where related entities share $p$-adic prefixes (e.g., multiples of $5, 25, 125$).
-*   **Logic**: If $A$ and $B$ are siblings, $|x_A - x_B|_p$ should be large. If $A$ is a parent of $B$, $|x_A - x_B|_p$ should be small (valuation $\geq 1$).
+### 1. Adelic Embedding (Multi-Prime)
+Currently, the solver typically focuses on a single prime or a sequential check.
+*   **Action**: Enable simultaneous extraction of $p$-adic valuations for $p=\{2, 3, 5, 7, \dots\}$ (or a subset based on data).
+*   **Reason**: "Truth" is the intersection of all relevant prime fields (Adelic).
 
-### 2. Hierarchical Energy Function (Energy Refinement)
-The current Mahler score is indifferent to topological rooting for small graphs.
-*   **Action**: Penalize "Valuation Inversion" in `_optimize_mapping`.
-*   **Constraint**: If Node $A$ has higher centrality (frequency/degree) than Node $B$, but $v_p(A) > v_p(B)$, the configuration is penalized.
-*   **Goal**: Force generalities (Phylum/Class) to the $p$-adic roots (lowest valuations).
-
-### 3. Parsimony-First RANSAC (Degree Collapse)
-The current solver fits a high-degree polynomial to *all* points (Signal + Noise).
-*   **Action**: Implement **True RANSAC** (Inlier Maximization) in `_optimize_mapping`.
+### 2. Sheaf Splining (Windowed Rigid Locking)
+*   **Action**: Implement a `SheafScanner` or modify `SerialSynthesizer` to process text in overlapping windows (e.g., 50% overlap).
 *   **Mechanism**:
-    1.  Select a random "Basis Set" of small size (e.g., $d=15$).
-    2.  Interpolate Polynomial $P(x)$ through this Basis.
-    3.  **Score**: Count "Inliers" (entities $e$ where $|P(coord(e))|_p$ is small).
-    4.  **Loop**: maximize the Inlier Count.
-*   **Result**: "Noise" words (like "Furthermore") will be rejected as Outliers because they don't fit the algebraic curve defined by the Biological Structure.
+    1.  Compute Manifold $M_1$ for Window 1.
+    2.  Compute Manifold $M_2$ for Window 2.
+    3.  **Intersection Check**: For all terms $t$ present in the overlap region, verify $Valuation_{M_1}(t) == Valuation_{M_2}(t)$.
+    4.  **Gluing**: If compliant, merge $M_1$ and $M_2$ using CRT (Chinese Remainder Theorem) or direct extension. If not, break the chain (Logic Cut).
 
-### 4. Restoration of Analytic Audits
-*   **Action**: Fix the `analytic_score` and `lipschitz_violation` reporting to ensure every solved model has a verifiable "Proof of Truth."
+### 3. Spline Curvature Filter
+*   **Action**: Filter out trivial linear dependencies.
+*   **Mechanism**: Ensure that the accepted logic exhibits non-trivial $p$-adic curvature (Mahler decay), rejecting "flat" or "noise" fits that happen to align by chance.
 
 ## Proposed Changes
 
-### [MODIFY] [algebraic_text.py](file:///d:/Dropbox/logic-miner-engine/src/logic_miner/core/algebraic_text.py)
-*   Update `_optimize_mapping` to use a **Hierarchical RANSAC** pattern.
-*   Implement a "Clustering Mutation" in the RANSAC loop rather than just random swaps.
+### [NEW] [sheaf_core.py](file:///d:/Dropbox/logic-miner-engine/src/logic_miner/core/sheaf_core.py)
+*   Create `SheafScanner` class.
+*   Implement `verify_overlap(manifold_a, manifold_b, overlap_terms)`.
+*   Implement `glue_manifolds(manifold_a, manifold_b)`.
 
-### [MODIFY] [engine.py](file:///d:/Dropbox/logic-miner-engine/src/logic_miner/engine.py)
-*   Ensure all audit metrics (Mahler, Lipschitz) are forwarded correctly to the result artifacts.
+### [MODIFY] [algebraic_text.py](file:///d:/Dropbox/logic-miner-engine/src/logic_miner/core/algebraic_text.py)
+*   Expose `solve_block` method to return a local manifold object (valuations + basis) rather than just updating global state immediately.
+*   Allow `AlgebraicTextSolver` to operate in "Local Section" mode.
+
+### [MODIFY] [adelic_integrator.py](file:///d:/Dropbox/logic-miner-engine/src/logic_miner/core/adelic_integrator.py)
+*   Ensure `solve_crt` is ready for rigid merging of verified sections.
 
 ## Verification Plan
+
 ### Automated Tests
-*   Run `sandbox/test_deep_mammalia.py`.
-*   **Check**: Mammalia must have valuation $\infty$ (coordinate 0) or share a prefix with all other mammals.
-*   **Check**: Platypus must share a $p$-adic prefix with mammals at a lower resolution than Eutherians share among themselves.
+*   **New Test**: `tests/test_sheaf_locking.py`
+    *   **Case 1 (Success)**: Two windows with consistent logic for "Socrates is Man". Expect: Merged Manifold.
+    *   **Case 2 (Failure)**: Window 1 says "Bat is Bird", Window 2 says "Bat is Mammal" (contradiction on overlap). Expect: Rejection/Split.
+    *   **Case 3 (Adelic)**: Verify consistency across $p=3$ and $p=5$.
+
+### Audits
+*   Run the Chemistry Textbook audit again with Sheaf Splining enabled to see if it correctly segments topics without blurring them together.

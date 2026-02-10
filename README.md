@@ -8,6 +8,18 @@ This project implements a universal algebraic engine designed to derive logical 
 2.  **Universal Solver**: The engine accepts only abstract mathematical objects (Matrices, Integer Sets).
 3.  **Algebraic Discovery**: Hierarchy and directionality are discovered via **Mahler Energy Minimization** and **$p$-adic Valuations**, never imposed by semantic weights.
 
+### **NON-ARCHIMEDEAN MANIFESTO**
+**CRITICAL**: This engine operates in a **Non-Archimedean (Ultrametric) Universe**.
+*   **FORBIDDEN**: "Probability", "Cosine Similarity", "Gradients", "Manifold Curvature" (Riemannian).
+*   **REQUIRED**: Strong Triangle Inequality ($\max(a,b) \ge c$), Discrete Galois Orbits, Algebraic Incidence.
+*   **REASON**: Logic is discrete and hierarchical (Tree-like), not continuous and fuzzy (Euclidean).
+
+### **ARITHMETIC OBSERVABLE MANDATE**
+**CRITICAL**: The Engine consumes **Arithmetic Observables**, not Topological ones.
+*   **Input**: Divisibility (Inclusion), Valuation (Frequency Ratios), Ramification (Commutators).
+*   **Output**: P-adic Integers (Hierarchical Coordinates).
+*   **Forbidden**: Graph Centrality, Simplicial Homology (Holes).
+
 ### Engine Components:
 *   `LogicMiner`: The router and primary interface.
 *   `AlgebraicTextSolver`: The core $p$-adic topology optimizer.
