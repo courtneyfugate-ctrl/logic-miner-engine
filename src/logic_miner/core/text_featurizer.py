@@ -1,33 +1,27 @@
 import re
+import math
 from collections import Counter, defaultdict
 
 class TextFeaturizer:
     """
-    Siloed Pre-processor for Natural Language.
-    Converts Raw Text -> Mathematical Objects (Adjacency Matrix, Entity Set).
-    Strictly devoid of logic solving.
+    Protocol V.56-Field: Structural Atomizer.
+    Transforms raw text into a "Field of Potentials" (Valuations and Implication Tensor).
+    Strictly demoted to an observation device for the Hensel Lifter.
     """
     def __init__(self):
         self.STOPWORDS = {
-            'the', 'a', 'an', 'and', 'or', 'but', 'if', 'then', 'else', 'when', 'at', 'by', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now', 'd', 'll', 'm', 'o',
-            'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am',
-            'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself',
-            'animal', 'creature', 'beast', 'thing', 'something', 'anything', 'everything', 'nothing', 'someone', 'anyone', 'everyone', 'noone'
-        }
-        
-        # V.31: Logical Operators (The "Arrows" of the manifold)
-        self.LOGICAL_OPERATORS = {
             'of', 'for', 'in', 'is', 'are', 'was', 'were', 'be',
-            'contains', 'measures', 'represents', 'defines', 'includes', 'produces',
-            'yields', 'requires', 'causes', 'changes', 'increases', 'decreases'
+            'with', 'from', 'at', 'by', 'on', 'an', 'a', 'the',
+            'this', 'that', 'these', 'those', 'which', 'who', 'whom'
         }
         
         self.VERB_BLOCKLIST = {
+            'described', 'calculated', 'determined', 'measured', 'produced', 'formed',
+            'observed', 'expected', 'assigned', 'indicated', 'required', 'provided',
             'explain', 'describe', 'how', 'answer', 'calculate', 'determine', 'identify', 'use', 'using', 'state', 'give', 'finding', 'deriving',
             'predict', 'write', 'draw', 'complete', 'balancing', 'click', 'view', 'check', 'learning', 'performance',
             'visit', 'watch', 'video', 'select', 'perform', 'make', 'build', 'consider', 'suppose', 'assume', 'compare'
         }
-        
         self.SCAFFOLDING_BLACKLIST = {
             'figure', 'table', 'example', 'problem', 'exercise', 'page', 'chapter', 'section',
             'that', 'which', 'who', 'whom', 'where', 'when', 'how', 'why',
@@ -35,36 +29,126 @@ class TextFeaturizer:
             'following', 'above', 'below', 'given', 'using', 'used', 'shows', 'shown'
         }
         
+        # Protocol V.56: Frontend Logic Normalization
+        self.IMMUTABLE_SINGULARS = {
+            'mass', 'gas', 'species', 'equations', 'process', 'business', 
+            'analysis', 'emphasis', 'hypothesis', 'basis', 'chemists',
+            'celsius', 'fahrenheit', 'phosphorus', 'glass', 'glassware',
+            'aqueous', 'precipitous', 'status', 'various', 'serious', 'previous'
+        }
+
+    def _singularize(self, term):
+        """
+        [Protocol V.56] Plural-to-Singular Normalization.
+        Extracts the logical core by removing linguistic plurality.
+        Executed in the Frontend Measurement Device.
+        """
+        if not term: return term
+        term = term.lower().strip()
+        
+        # Protect chemical immutable singulars and short words
+        if term in self.IMMUTABLE_SINGULARS or len(term) <= 3:
+            return term
+            
+        # Basic rule-based singularization
+        if term.endswith('ies') and len(term) > 4:
+            return term[:-3] + 'y'
+        if term.endswith('es') and len(term) > 4:
+            # charges -> charge, gases -> gas, but NOT gas -> ga
+            if term.endswith('ses') or term.endswith('xes') or term.endswith('ches') or term.endswith('shes'):
+                return term[:-2]
+            return term[:-1]
+        if term.endswith('s') and not term.endswith('ss') and len(term) > 3:
+            return term[:-1]
+            
+        return term
+        
     def extract_entities(self, raw_text, limit=600):
         """
-        Extracts recurring terms (Capitalized Phrases + Frequent Lowercase Terms).
+        [Protocol V.56] Strict Atomizer: Identifies valid candidates (Atoms).
         """
         # 1. Capitalized Phrases (High Signal)
         phrase_pattern = r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b'
         cap_candidates = re.findall(phrase_pattern, raw_text)
         
         # 2. Frequent Lowercase Words (Semantic Core)
-        # Filtered by length and stopwords later
         all_words = re.findall(r'\b[a-z]{4,}\b', raw_text.lower())
         
         candidates = []
-        # Process Capitalized
+        # Process Capitalized -> Normalized to Lowercase & Singular
         for c in cap_candidates:
             parts = c.split()
-            clean_parts = [p for p in parts if p.lower() not in self.STOPWORDS and p.lower() not in self.VERB_BLOCKLIST]
+            norm_parts = [self._singularize(p) for p in parts]
+            clean_parts = [p for p in norm_parts if p not in self.STOPWORDS and len(p) > 2] # Junk removal
+            
             if clean_parts:
                 candidates.append(" ".join(clean_parts))
         
-        # Process Lowercase (Frequency based)
+        # Process Lowercase -> Normalized to Lowercase & Singular
         word_counts = Counter(all_words)
         for word, count in word_counts.most_common(limit):
-            if word not in self.STOPWORDS and word not in self.VERB_BLOCKLIST:
-                # Titlize for canonical form? Sure.
-                candidates.append(word.capitalize())
+            norm_word = self._singularize(word)
+            if norm_word not in self.STOPWORDS and len(norm_word) > 2:
+                candidates.append(norm_word)
                 
-        # Final Top Candidates
-        counts = Counter(candidates)
-        return [w for w, c in counts.most_common(limit) if c >= 2]
+        # Return Bag of Atoms (counts preserved for calculation)
+        return Counter(candidates)
+
+    def compute_valuation_map(self, atom_counts):
+        """
+        [Protocol V.56.5] Normalized Altitude.
+        Uses a fixed anchor (MaxFreq=1000) to stabilize valuations across windows.
+        v(A) = max(0, floor( log(1000) - log(Freq(A)) ))
+        """
+        if not atom_counts: return {}
+        
+        valuations = {}
+        for atom, freq in atom_counts.items():
+            # Stabilized log-base (Natural log)
+            # freq=1 -> v=6.9 (~6)
+            # freq=1000 -> v=0
+            v = math.floor(max(0, math.log(1000) - math.log(freq)))
+            valuations[atom] = v
+            
+        return valuations
+
+    def compute_interaction_tensor(self, raw_text, entities):
+        """
+        [Protocol V.56] Distance/Implication: P(X|Y) = Count(X intersect Y) / Count(Y).
+        Measures how strongly atoms define each other in the Field.
+        """
+        # Segment text into logical windows (sentences/clauses)
+        segments = re.split(r'(?<=[.!?])\s+|,\s+|\s+and\s+', raw_text.lower())
+        
+        # Track individual and co-occurrence counts
+        individual_counts = Counter()
+        co_occurrence_counts = defaultdict(Counter)
+        
+        for s in segments:
+            # Find which entities are present in this segment
+            present = []
+            for e in entities:
+                # Simple containment check for normalized entities
+                if e in s:
+                    present.append(e)
+            
+            # Update counts
+            for e in present:
+                individual_counts[e] += 1
+                for other in present:
+                    if e != other:
+                        co_occurrence_counts[other][e] += 1 # Y defines X
+                        
+        # Calculate Conditional Probabilities P(X|Y)
+        tensor = defaultdict(dict)
+        for y in individual_counts:
+            for x in co_occurrence_counts[y]:
+                # P(X|Y) = N(X,Y) / N(Y)
+                p_val = co_occurrence_counts[y][x] / individual_counts[y]
+                if p_val > 0.1: # Noise threshold
+                    tensor[y][x] = p_val
+                    
+        return tensor
 
     def extract_logical_triplets(self, text, entities):
         """
@@ -263,17 +347,21 @@ class TextFeaturizer:
             triad_terms = set()
             for s, r, o in triads:
                 # Basic cleanup: Remove "the", "a" etc. if they are prefixes
-                s_clean = re.sub(r'^(The|A|An)\s+', '', s, flags=re.I)
-                o_clean = re.sub(r'^(The|A|An)\s+', '', o, flags=re.I)
+                # Enforce Lowercase & Singular for pure logic
+                s_low = re.sub(r'^(the|a|an)\s+', '', s.lower(), flags=re.I)
+                o_low = re.sub(r'^(the|a|an)\s+', '', o.lower(), flags=re.I)
+                
+                # Further normalize by splitting and singularizing each component
+                s_clean = " ".join([self._singularize(p) for p in s_low.split()])
+                o_clean = " ".join([self._singularize(p) for p in o_low.split()])
+                
                 triad_terms.add(s_clean)
                 triad_terms.add(o_clean)
             
             # Merge with existing entities (uniquely)
-            combined_entities = list(entities)
-            existing_norm = set(e.lower() for e in entities)
+            combined_entities = list(set(self._singularize(e) for e in entities))
             for t in triad_terms:
-                t_low = t.lower()
-                if t_low not in existing_norm and len(t) > 3 and t_low not in self.STOPWORDS:
+                if t not in combined_entities and len(t) > 3 and t not in self.STOPWORDS:
                     combined_entities.append(t)
             entities = combined_entities
         
@@ -290,11 +378,13 @@ class TextFeaturizer:
         
         # Process Triads
         for s, r, o in triads:
-            # Case-Insensitive Matching
-            s_low = s.lower()
-            o_low = o.lower()
-            subjs = [e for e in entities if e.lower() in s_low or s_low in e.lower()]
-            objs = [e for e in entities if e.lower() in o_low or o_low in e.lower()]
+            # Case-Insensitive & Singular Matching
+            s_low = " ".join([self._singularize(p) for p in s.lower().split()])
+            o_low = " ".join([self._singularize(p) for p in o.lower().split()])
+            
+            # Match tokens to entities
+            subjs = [e for e in entities if e in s_low or s_low in e]
+            objs = [e for e in entities if e in o_low or o_low in e]
             subjs.sort(key=len, reverse=True)
             objs.sort(key=len, reverse=True)
             

@@ -1,0 +1,2050 @@
+{
+  "metadata": {
+    "description": "Phase XXXIII Nightmare Gauntlet",
+    "text_length": 100073,
+    "ontology_depth": 20,
+    "features": [
+      "Deep Chain",
+      "Dense Clique",
+      "Polysemy",
+      "Cycle"
+    ]
+  },
+  "ground_truth_ontology": {
+    "Root": {
+      "initiates": [
+        "Level_1"
+      ]
+    },
+    "Level_1": {
+      "generates": [
+        "Level_2"
+      ]
+    },
+    "Level_2": {
+      "generates": [
+        "Level_3"
+      ]
+    },
+    "Level_3": {
+      "generates": [
+        "Level_4"
+      ]
+    },
+    "Level_4": {
+      "generates": [
+        "Level_5"
+      ]
+    },
+    "Level_5": {
+      "generates": [
+        "Level_6"
+      ]
+    },
+    "Level_6": {
+      "generates": [
+        "Level_7"
+      ]
+    },
+    "Level_7": {
+      "generates": [
+        "Level_8"
+      ]
+    },
+    "Level_8": {
+      "generates": [
+        "Level_9"
+      ]
+    },
+    "Level_9": {
+      "generates": [
+        "Level_10"
+      ]
+    },
+    "Level_10": {
+      "generates": [
+        "Level_11"
+      ]
+    },
+    "Level_11": {
+      "generates": [
+        "Level_12"
+      ]
+    },
+    "Level_12": {
+      "generates": [
+        "Level_13"
+      ]
+    },
+    "Level_13": {
+      "generates": [
+        "Level_14"
+      ]
+    },
+    "Level_14": {
+      "generates": [
+        "Level_15"
+      ]
+    },
+    "Level_15": {
+      "generates": [
+        "Level_16"
+      ]
+    },
+    "Level_16": {
+      "generates": [
+        "Level_17"
+      ]
+    },
+    "Level_17": {
+      "generates": [
+        "Level_18"
+      ]
+    },
+    "Level_18": {
+      "generates": [
+        "Level_19"
+      ]
+    },
+    "Level_19": {
+      "generates": [
+        "Level_20"
+      ]
+    },
+    "Level_20": {
+      "fades-into": [
+        "Void"
+      ]
+    },
+    "Alpha": {
+      "opposes": [
+        "Beta",
+        "Delta",
+        "Epsilon"
+      ],
+      "links-to": [
+        "Gamma"
+      ]
+    },
+    "Beta": {
+      "links-to": [
+        "Alpha"
+      ],
+      "correlates": [
+        "Gamma"
+      ],
+      "opposes": [
+        "Delta",
+        "Epsilon"
+      ]
+    },
+    "Gamma": {
+      "causes": [
+        "Alpha"
+      ],
+      "links-to": [
+        "Beta",
+        "Epsilon"
+      ],
+      "opposes": [
+        "Delta"
+      ]
+    },
+    "Delta": {
+      "links-to": [
+        "Alpha",
+        "Gamma",
+        "Epsilon"
+      ],
+      "correlates": [
+        "Beta"
+      ]
+    },
+    "Epsilon": {
+      "correlates": [
+        "Alpha",
+        "Delta"
+      ],
+      "causes": [
+        "Beta",
+        "Gamma"
+      ]
+    },
+    "Music": {
+      "uses": [
+        "Scale",
+        "Note"
+      ]
+    },
+    "Fish": {
+      "has": [
+        "Scale",
+        "Fin"
+      ]
+    },
+    "Map": {
+      "defined-by": [
+        "Scale",
+        "Legend"
+      ]
+    },
+    "Creation": {
+      "leads-to": [
+        "Preservation"
+      ]
+    },
+    "Preservation": {
+      "leads-to": [
+        "Destruction"
+      ]
+    },
+    "Destruction": {
+      "leads-to": [
+        "Rebirth"
+      ]
+    },
+    "Rebirth": {
+      "leads-to": [
+        "Creation"
+      ]
+    },
+    "Void": {
+      "is": [
+        "Nothing",
+        "Empty",
+        "Null"
+      ]
+    }
+  },
+  "generated_text": "Level_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_11 generates Level_12.\n\nRebirth leads-to Creation.\n\nLevel_1 generates Level_2.\n\nRebirth leads-to Creation.\n\nPreservation leads-to Destruction.\n\nLevel_19 generates Level_20.\n\nEpsilon correlates with Alpha. Delta is linked to Epsilon. Epsilon triggers Gamma. Beta is the result of Epsilon.\n\nBeta opposes Delta. Beta opposes Epsilon. Gamma is linked to Beta. Beta links-to Alpha.\n\nLevel_13 generates Level_14.\n\nLevel_18 generates Level_19.\n\nLevel_13 generates Level_14.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta.\n\nLevel_4 generates Level_5.\n\nLevel_9 generates Level_10.\n\nLevel_5 generates Level_6.\n\nLevel_19 generates Level_20.\n\nLevel_9 generates Level_10.\n\nBeta is the result of Epsilon. Epsilon correlates with Alpha. Delta is linked to Epsilon. Epsilon triggers Gamma.\n\nLevel_1 generates Level_2.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta correlates with Gamma. Beta opposes Delta.\n\nLevel_10 generates Level_11.\n\nFish has Fin. The Fish is characterized by Scale.\n\nLevel_14 generates Level_15.\n\nLevel_14 generates Level_15.\n\nGamma is linked to Beta. Beta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta.\n\nLevel_16 generates Level_17.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nLevel_2 generates Level_3.\n\nScale is found in Fish. The Fish is characterized by Fin.\n\nLevel_9 generates Level_10.\n\nMap defined-by Legend. Map defined-by Scale.\n\nDestruction leads-to Rebirth.\n\nFish contains Fin. The Fish is characterized by Scale.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nLevel_5 generates Level_6.\n\nLevel_2 generates Level_3.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nRebirth leads-to Creation.\n\nGamma is the result of Epsilon. Epsilon causes Beta. Epsilon is associated with Alpha. Delta is linked to Epsilon.\n\nLevel_4 generates Level_5.\n\nLevel_11 generates Level_12.\n\nLevel_10 generates Level_11.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_19 generates Level_20.\n\nMusic uses Scale. Music uses Note.\n\nCreation leads-to Preservation.\n\nRebirth leads-to Creation.\n\nLevel_13 generates Level_14.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta. Alpha links-to Gamma.\n\nGamma leads to Alpha. Gamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon.\n\nScale is found in Fish. The Fish is characterized by Fin.\n\nLevel_2 generates Level_3.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nMusic uses Scale. Music uses Note.\n\nLevel_14 generates Level_15.\n\nMusic uses Note. Music uses Scale.\n\nPreservation leads-to Destruction.\n\nLevel_3 generates Level_4.\n\nMusic uses Scale. Music uses Note.\n\nAlpha is linked to Epsilon. Epsilon leads to Gamma. Epsilon is associated with Delta. Beta is the result of Epsilon.\n\nLevel_1 generates Level_2.\n\nLevel_19 generates Level_20.\n\nLevel_12 generates Level_13.\n\nPreservation leads-to Destruction.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Gamma causes Alpha.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_5 generates Level_6.\n\nLevel_12 generates Level_13.\n\nLevel_8 generates Level_9.\n\nDestruction leads-to Rebirth.\n\nPreservation leads-to Destruction.\n\nAlpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta.\n\nDelta is associated with Beta. Delta links-to Epsilon. Delta links-to Gamma. Delta links-to Alpha.\n\nDelta links-to Epsilon. Delta links-to Gamma. Delta correlates with Beta. Delta links-to Alpha.\n\nPreservation leads-to Destruction.\n\nMusic uses Scale. Music uses Note.\n\nLevel_9 generates Level_10.\n\nAlpha opposes Delta. Alpha opposes Beta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nLevel_13 generates Level_14.\n\nDestruction leads-to Rebirth.\n\nLevel_7 generates Level_8.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_2 generates Level_3.\n\nDestruction leads-to Rebirth.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_12 generates Level_13.\n\nDestruction leads-to Rebirth.\n\nMusic uses Scale. Music uses Note.\n\nLevel_15 generates Level_16.\n\nLevel_16 generates Level_17.\n\nLevel_11 generates Level_12.\n\nLevel_6 generates Level_7.\n\nLevel_11 generates Level_12.\n\nLevel_1 generates Level_2.\n\nMusic uses Note. Music uses Scale.\n\nCreation leads-to Preservation.\n\nLevel_4 generates Level_5.\n\nPreservation leads-to Destruction.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_12 generates Level_13.\n\nLevel_6 generates Level_7.\n\nLevel_7 generates Level_8.\n\nLevel_14 generates Level_15.\n\nFish contains Scale. Fish has Fin.\n\nLevel_13 generates Level_14.\n\nRebirth leads-to Creation.\n\nLevel_16 generates Level_17.\n\nMusic uses Scale. Music uses Note.\n\nLevel_19 generates Level_20.\n\nLevel_4 generates Level_5.\n\nLevel_18 generates Level_19.\n\nLevel_20 fades-into Void.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nLevel_8 generates Level_9.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_8 generates Level_9.\n\nLevel_13 generates Level_14.\n\nLevel_3 generates Level_4.\n\nLevel_2 generates Level_3.\n\nCreation leads-to Preservation.\n\nRebirth leads-to Creation.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_11 generates Level_12.\n\nLevel_7 generates Level_8.\n\nLevel_14 generates Level_15.\n\nLevel_10 generates Level_11.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_18 generates Level_19.\n\nLevel_2 generates Level_3.\n\nRoot initiates Level_1.\n\nLevel_1 generates Level_2.\n\nLevel_15 generates Level_16.\n\nLevel_15 generates Level_16.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nLevel_3 generates Level_4.\n\nThe Fish is characterized by Fin. Scale is a component of Fish.\n\nLevel_3 generates Level_4.\n\nLevel_17 generates Level_18.\n\nLevel_18 generates Level_19.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_8 generates Level_9.\n\nLevel_2 generates Level_3.\n\nLevel_5 generates Level_6.\n\nLevel_18 generates Level_19.\n\nGamma is the result of Epsilon. Delta is linked to Epsilon. Epsilon correlates with Alpha. Epsilon triggers Beta.\n\nLevel_16 generates Level_17.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta. Alpha is the result of Gamma.\n\nLevel_6 generates Level_7.\n\nLevel_19 generates Level_20.\n\nLevel_11 generates Level_12.\n\nRoot initiates Level_1.\n\nPreservation leads-to Destruction.\n\nDelta is associated with Beta. Delta links-to Epsilon. Delta links-to Gamma. Delta links-to Alpha.\n\nCreation leads-to Preservation.\n\nLevel_6 generates Level_7.\n\nRebirth leads-to Creation.\n\nEpsilon leads to Beta. Epsilon is associated with Alpha. Epsilon leads to Gamma. Epsilon correlates with Delta.\n\nLevel_7 generates Level_8.\n\nLevel_17 generates Level_18.\n\nDestruction leads-to Rebirth.\n\nLevel_10 generates Level_11.\n\nBeta opposes Delta. Gamma is linked to Beta. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_5 generates Level_6.\n\nLevel_5 generates Level_6.\n\nGamma opposes Delta. Gamma triggers Alpha. Gamma links-to Epsilon. Gamma links-to Beta.\n\nLevel_9 generates Level_10.\n\nCreation leads-to Preservation.\n\nRebirth leads-to Creation.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Beta. Alpha opposes Epsilon.\n\nCreation leads-to Preservation.\n\nLevel_3 generates Level_4.\n\nLevel_7 generates Level_8.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_20 fades-into Void.\n\nLevel_7 generates Level_8.\n\nLevel_13 generates Level_14.\n\nLevel_9 generates Level_10.\n\nLevel_4 generates Level_5.\n\nLevel_7 generates Level_8.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma.\n\nLevel_2 generates Level_3.\n\nLevel_3 generates Level_4.\n\nLevel_4 generates Level_5.\n\nLevel_1 generates Level_2.\n\nLevel_8 generates Level_9.\n\nLevel_10 generates Level_11.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta correlates with Beta. Delta links-to Epsilon.\n\nPreservation leads-to Destruction.\n\nLevel_12 generates Level_13.\n\nLevel_18 generates Level_19.\n\nLevel_17 generates Level_18.\n\nLevel_20 fades-into Void.\n\nLevel_17 generates Level_18.\n\nDestruction leads-to Rebirth.\n\nRebirth leads-to Creation.\n\nLevel_10 generates Level_11.\n\nLevel_9 generates Level_10.\n\nFish contains Scale. Fin is found in Fish.\n\nLevel_18 generates Level_19.\n\nDestruction leads-to Rebirth.\n\nLevel_17 generates Level_18.\n\nLevel_4 generates Level_5.\n\nLevel_5 generates Level_6.\n\nFish contains Fin. Fish contains Scale.\n\nBeta links-to Alpha. Beta correlates with Gamma. Beta opposes Epsilon. Beta opposes Delta.\n\nFish contains Fin. Fish contains Scale.\n\nLevel_20 fades-into Void.\n\nDestruction leads-to Rebirth.\n\nLevel_2 generates Level_3.\n\nLevel_8 generates Level_9.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_12 generates Level_13.\n\nBeta links-to Alpha. Beta opposes Epsilon. Beta opposes Delta. Beta correlates with Gamma.\n\nLevel_13 generates Level_14.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta.\n\nDelta links-to Epsilon. Delta correlates with Beta. Delta links-to Gamma. Delta links-to Alpha.\n\nLevel_9 generates Level_10.\n\nLevel_3 generates Level_4.\n\nEpsilon leads to Beta. Delta is linked to Epsilon. Epsilon correlates with Alpha. Epsilon triggers Gamma.\n\nLevel_17 generates Level_18.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nFin is found in Fish. Scale is found in Fish.\n\nLevel_15 generates Level_16.\n\nLevel_12 generates Level_13.\n\nLevel_10 generates Level_11.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta correlates with Beta. Delta links-to Gamma.\n\nLevel_10 generates Level_11.\n\nEpsilon correlates with Delta. Epsilon leads to Gamma. Epsilon is associated with Alpha. Epsilon leads to Beta.\n\nLevel_13 generates Level_14.\n\nDelta links-to Gamma. Delta is associated with Beta. Delta links-to Alpha. Delta links-to Epsilon.\n\nLevel_20 fades-into Void.\n\nLevel_7 generates Level_8.\n\nLevel_18 generates Level_19.\n\nEpsilon leads to Beta. Delta is linked to Epsilon. Epsilon is associated with Alpha. Epsilon triggers Gamma.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nLevel_6 generates Level_7.\n\nMap defined-by Scale. Map defined-by Legend.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_1 generates Level_2.\n\nLevel_10 generates Level_11.\n\nLevel_12 generates Level_13.\n\nLevel_8 generates Level_9.\n\nScale is a component of Fish. Fish has Fin.\n\nBeta links-to Alpha. Beta opposes Delta. Beta correlates with Gamma. Beta opposes Epsilon.\n\nLevel_5 generates Level_6.\n\nLevel_13 generates Level_14.\n\nLevel_3 generates Level_4.\n\nLevel_14 generates Level_15.\n\nAlpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Beta.\n\nLevel_6 generates Level_7.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nLevel_18 generates Level_19.\n\nLevel_12 generates Level_13.\n\nGamma is the result of Epsilon. Epsilon causes Beta. Epsilon is associated with Delta. Epsilon correlates with Alpha.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_9 generates Level_10.\n\nLevel_3 generates Level_4.\n\nDelta is linked to Epsilon. Alpha is linked to Epsilon. Epsilon leads to Gamma. Epsilon leads to Beta.\n\nLevel_14 generates Level_15.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nCreation leads-to Preservation.\n\nDelta correlates with Beta. Delta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon.\n\nBeta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta. Beta opposes Epsilon.\n\nLevel_2 generates Level_3.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon. Delta correlates with Beta.\n\nDelta is linked to Epsilon. Alpha is linked to Epsilon. Epsilon causes Beta. Gamma is the result of Epsilon.\n\nLevel_9 generates Level_10.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_20 fades-into Void.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nLevel_5 generates Level_6.\n\nLevel_3 generates Level_4.\n\nLevel_13 generates Level_14.\n\nLevel_15 generates Level_16.\n\nLevel_3 generates Level_4.\n\nLevel_11 generates Level_12.\n\nLevel_10 generates Level_11.\n\nLevel_5 generates Level_6.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_13 generates Level_14.\n\nLevel_1 generates Level_2.\n\nLevel_20 fades-into Void.\n\nLevel_18 generates Level_19.\n\nLevel_10 generates Level_11.\n\nLevel_12 generates Level_13.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nLevel_19 generates Level_20.\n\nMap defined-by Legend. Map defined-by Scale.\n\nGamma links-to Epsilon. Gamma causes Alpha. Gamma opposes Delta. Gamma links-to Beta.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Gamma causes Alpha.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_18 generates Level_19.\n\nLevel_18 generates Level_19.\n\nLevel_8 generates Level_9.\n\nLevel_3 generates Level_4.\n\nCreation leads-to Preservation.\n\nLevel_17 generates Level_18.\n\nDelta links-to Epsilon. Beta is linked to Delta. Delta links-to Alpha. Delta links-to Gamma.\n\nDelta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma. Delta is associated with Beta.\n\nLevel_7 generates Level_8.\n\nLevel_16 generates Level_17.\n\nMap defined-by Scale. Map defined-by Legend.\n\nCreation leads-to Preservation.\n\nLevel_16 generates Level_17.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nGamma triggers Alpha. Gamma links-to Beta. Gamma opposes Delta. Gamma links-to Epsilon.\n\nLevel_18 generates Level_19.\n\nLevel_13 generates Level_14.\n\nLevel_12 generates Level_13.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_8 generates Level_9.\n\nLevel_2 generates Level_3.\n\nDestruction leads-to Rebirth.\n\nBeta correlates with Gamma. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_10 generates Level_11.\n\nDestruction leads-to Rebirth.\n\nGamma triggers Alpha. Gamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nEpsilon triggers Gamma. Epsilon correlates with Delta. Epsilon is associated with Alpha. Epsilon leads to Beta.\n\nLevel_13 generates Level_14.\n\nCreation leads-to Preservation.\n\nLevel_7 generates Level_8.\n\nLevel_1 generates Level_2.\n\nLevel_1 generates Level_2.\n\nLevel_6 generates Level_7.\n\nLevel_19 generates Level_20.\n\nLevel_18 generates Level_19.\n\nRebirth leads-to Creation.\n\nAlpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta. Alpha links-to Gamma.\n\nLevel_6 generates Level_7.\n\nMusic uses Scale. Music uses Note.\n\nLevel_8 generates Level_9.\n\nRebirth leads-to Creation.\n\nLevel_15 generates Level_16.\n\nLevel_17 generates Level_18.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nMap defined-by Legend. Map defined-by Scale.\n\nMusic uses Note. Music uses Scale.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nRebirth leads-to Creation.\n\nGamma links-to Epsilon. Gamma triggers Alpha. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_15 generates Level_16.\n\nLevel_2 generates Level_3.\n\nLevel_14 generates Level_15.\n\nThe Fish is characterized by Fin. Scale is found in Fish.\n\nLevel_11 generates Level_12.\n\nRoot initiates Level_1.\n\nFin is found in Fish. The Fish is characterized by Scale.\n\nLevel_4 generates Level_5.\n\nLevel_18 generates Level_19.\n\nDelta links-to Epsilon. Beta is linked to Delta. Delta links-to Gamma. Delta links-to Alpha.\n\nLevel_5 generates Level_6.\n\nRebirth leads-to Creation.\n\nLevel_1 generates Level_2.\n\nLevel_7 generates Level_8.\n\nCreation leads-to Preservation.\n\nLevel_5 generates Level_6.\n\nLevel_16 generates Level_17.\n\nLevel_1 generates Level_2.\n\nLevel_5 generates Level_6.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta. Gamma triggers Alpha.\n\nLevel_13 generates Level_14.\n\nRebirth leads-to Creation.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_15 generates Level_16.\n\nLevel_3 generates Level_4.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nAlpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon.\n\nMap defined-by Scale. Map defined-by Legend.\n\nAlpha opposes Epsilon. Alpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma.\n\nGamma opposes Delta. Gamma leads to Alpha. Gamma links-to Epsilon. Gamma links-to Beta.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_15 generates Level_16.\n\nPreservation leads-to Destruction.\n\nLevel_4 generates Level_5.\n\nLevel_20 fades-into Void.\n\nLevel_4 generates Level_5.\n\nGamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nRebirth leads-to Creation.\n\nLevel_20 fades-into Void.\n\nLevel_12 generates Level_13.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_7 generates Level_8.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_1 generates Level_2.\n\nLevel_7 generates Level_8.\n\nLevel_14 generates Level_15.\n\nDelta links-to Alpha. Delta correlates with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_20 fades-into Void.\n\nLevel_4 generates Level_5.\n\nCreation leads-to Preservation.\n\nRoot initiates Level_1.\n\nLevel_1 generates Level_2.\n\nLevel_16 generates Level_17.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon. Beta is linked to Delta.\n\nRoot initiates Level_1.\n\nLevel_4 generates Level_5.\n\nPreservation leads-to Destruction.\n\nCreation leads-to Preservation.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta. Alpha is the result of Gamma.\n\nLevel_7 generates Level_8.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nDelta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha. Delta is associated with Beta.\n\nLevel_8 generates Level_9.\n\nLevel_15 generates Level_16.\n\nDelta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha. Delta correlates with Beta.\n\nLevel_15 generates Level_16.\n\nGamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_1 generates Level_2.\n\nMusic uses Note. Music uses Scale.\n\nDestruction leads-to Rebirth.\n\nLevel_5 generates Level_6.\n\nEpsilon correlates with Alpha. Gamma is the result of Epsilon. Beta is the result of Epsilon. Epsilon correlates with Delta.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta. Beta correlates with Gamma.\n\nDelta is linked to Epsilon. Beta is the result of Epsilon. Epsilon triggers Gamma. Epsilon correlates with Alpha.\n\nLevel_10 generates Level_11.\n\nLevel_12 generates Level_13.\n\nMusic uses Scale. Music uses Note.\n\nThe Fish is characterized by Fin. Fish has Scale.\n\nLevel_18 generates Level_19.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta.\n\nLevel_4 generates Level_5.\n\nLevel_4 generates Level_5.\n\nThe Fish is characterized by Scale. Fish contains Fin.\n\nLevel_4 generates Level_5.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_3 generates Level_4.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_19 generates Level_20.\n\nGamma opposes Delta. Gamma triggers Alpha. Gamma links-to Epsilon. Gamma links-to Beta.\n\nBeta is associated with Gamma. Beta opposes Delta. Beta links-to Alpha. Beta opposes Epsilon.\n\nLevel_3 generates Level_4.\n\nLevel_1 generates Level_2.\n\nLevel_2 generates Level_3.\n\nLevel_2 generates Level_3.\n\nLevel_13 generates Level_14.\n\nRoot initiates Level_1.\n\nMusic uses Note. Music uses Scale.\n\nLevel_2 generates Level_3.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma links-to Beta. Gamma causes Alpha.\n\nLevel_7 generates Level_8.\n\nLevel_3 generates Level_4.\n\nFish has Scale. Fish has Fin.\n\nLevel_1 generates Level_2.\n\nLevel_11 generates Level_12.\n\nLevel_16 generates Level_17.\n\nDestruction leads-to Rebirth.\n\nAlpha is linked to Epsilon. Epsilon correlates with Delta. Epsilon causes Beta. Epsilon causes Gamma.\n\nLevel_8 generates Level_9.\n\nCreation leads-to Preservation.\n\nLevel_20 fades-into Void.\n\nMusic uses Scale. Music uses Note.\n\nLevel_1 generates Level_2.\n\nRoot initiates Level_1.\n\nRoot initiates Level_1.\n\nLevel_7 generates Level_8.\n\nCreation leads-to Preservation.\n\nLevel_11 generates Level_12.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Gamma triggers Alpha.\n\nLevel_4 generates Level_5.\n\nLevel_14 generates Level_15.\n\nLevel_8 generates Level_9.\n\nLevel_19 generates Level_20.\n\nLevel_5 generates Level_6.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nRebirth leads-to Creation.\n\nLevel_5 generates Level_6.\n\nMap defined-by Scale. Map defined-by Legend.\n\nGamma is linked to Beta. Beta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta.\n\nLevel_18 generates Level_19.\n\nLevel_7 generates Level_8.\n\nLevel_19 generates Level_20.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_1 generates Level_2.\n\nPreservation leads-to Destruction.\n\nLevel_1 generates Level_2.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon.\n\nDestruction leads-to Rebirth.\n\nLevel_6 generates Level_7.\n\nLevel_12 generates Level_13.\n\nRebirth leads-to Creation.\n\nLevel_18 generates Level_19.\n\nLevel_15 generates Level_16.\n\nLevel_8 generates Level_9.\n\nLevel_15 generates Level_16.\n\nLevel_19 generates Level_20.\n\nLevel_11 generates Level_12.\n\nDelta is linked to Epsilon. Alpha is linked to Epsilon. Epsilon causes Beta. Epsilon causes Gamma.\n\nEpsilon causes Gamma. Delta is linked to Epsilon. Epsilon leads to Beta. Alpha is linked to Epsilon.\n\nLevel_9 generates Level_10.\n\nRoot initiates Level_1.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta is associated with Gamma. Beta opposes Delta.\n\nLevel_6 generates Level_7.\n\nLevel_15 generates Level_16.\n\nLevel_17 generates Level_18.\n\nLevel_4 generates Level_5.\n\nLevel_10 generates Level_11.\n\nDelta links-to Gamma. Delta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon.\n\nMusic uses Note. Music uses Scale.\n\nLevel_16 generates Level_17.\n\nRebirth leads-to Creation.\n\nLevel_19 generates Level_20.\n\nLevel_19 generates Level_20.\n\nPreservation leads-to Destruction.\n\nLevel_2 generates Level_3.\n\nLevel_12 generates Level_13.\n\nBeta opposes Delta. Beta correlates with Gamma. Beta links-to Alpha. Beta opposes Epsilon.\n\nLevel_6 generates Level_7.\n\nLevel_4 generates Level_5.\n\nLevel_9 generates Level_10.\n\nLevel_16 generates Level_17.\n\nBeta opposes Delta. Gamma is linked to Beta. Beta opposes Epsilon. Beta links-to Alpha.\n\nPreservation leads-to Destruction.\n\nLevel_14 generates Level_15.\n\nBeta links-to Alpha. Beta correlates with Gamma. Beta opposes Delta. Beta opposes Epsilon.\n\nLevel_17 generates Level_18.\n\nLevel_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nLevel_18 generates Level_19.\n\nLevel_8 generates Level_9.\n\nPreservation leads-to Destruction.\n\nLevel_7 generates Level_8.\n\nFish contains Fin. Scale is found in Fish.\n\nAlpha is the result of Gamma. Gamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta.\n\nLevel_9 generates Level_10.\n\nLevel_19 generates Level_20.\n\nLevel_12 generates Level_13.\n\nLevel_12 generates Level_13.\n\nLevel_13 generates Level_14.\n\nDelta correlates with Beta. Delta links-to Epsilon. Delta links-to Gamma. Delta links-to Alpha.\n\nLevel_11 generates Level_12.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nAlpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta.\n\nLevel_1 generates Level_2.\n\nLevel_10 generates Level_11.\n\nLevel_19 generates Level_20.\n\nLevel_3 generates Level_4.\n\nEpsilon correlates with Alpha. Delta is linked to Epsilon. Epsilon leads to Gamma. Epsilon leads to Beta.\n\nAlpha is linked to Epsilon. Epsilon leads to Beta. Epsilon triggers Gamma. Epsilon correlates with Delta.\n\nLevel_1 generates Level_2.\n\nLevel_6 generates Level_7.\n\nBeta is linked to Delta. Delta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta. Alpha links-to Gamma.\n\nLevel_16 generates Level_17.\n\nLevel_13 generates Level_14.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nDestruction leads-to Rebirth.\n\nLevel_12 generates Level_13.\n\nLevel_11 generates Level_12.\n\nLevel_9 generates Level_10.\n\nEpsilon is associated with Alpha. Epsilon leads to Beta. Delta is linked to Epsilon. Epsilon causes Gamma.\n\nLevel_12 generates Level_13.\n\nLevel_2 generates Level_3.\n\nLevel_10 generates Level_11.\n\nLevel_11 generates Level_12.\n\nLevel_3 generates Level_4.\n\nLevel_15 generates Level_16.\n\nEpsilon leads to Gamma. Epsilon is associated with Alpha. Epsilon causes Beta. Epsilon correlates with Delta.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma.\n\nLevel_7 generates Level_8.\n\nLevel_11 generates Level_12.\n\nLevel_7 generates Level_8.\n\nLevel_17 generates Level_18.\n\nLevel_18 generates Level_19.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_9 generates Level_10.\n\nThe Fish is characterized by Scale. Fin is found in Fish.\n\nLevel_14 generates Level_15.\n\nRebirth leads-to Creation.\n\nLevel_12 generates Level_13.\n\nLevel_20 fades-into Void.\n\nDelta links-to Epsilon. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Alpha.\n\nLevel_15 generates Level_16.\n\nLevel_8 generates Level_9.\n\nLevel_6 generates Level_7.\n\nLevel_5 generates Level_6.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta.\n\nFish contains Scale. Fish contains Fin.\n\nLevel_14 generates Level_15.\n\nLevel_16 generates Level_17.\n\nLevel_14 generates Level_15.\n\nLevel_15 generates Level_16.\n\nBeta is linked to Delta. Delta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha.\n\nLevel_1 generates Level_2.\n\nPreservation leads-to Destruction.\n\nAlpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta. Alpha links-to Gamma.\n\nLevel_16 generates Level_17.\n\nAlpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Beta.\n\nDestruction leads-to Rebirth.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nLevel_9 generates Level_10.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nEpsilon is associated with Delta. Epsilon causes Gamma. Alpha is linked to Epsilon. Epsilon triggers Beta.\n\nLevel_8 generates Level_9.\n\nLevel_3 generates Level_4.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_2 generates Level_3.\n\nAlpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Beta. Alpha opposes Delta.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_4 generates Level_5.\n\nLevel_13 generates Level_14.\n\nLevel_7 generates Level_8.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_12 generates Level_13.\n\nLevel_11 generates Level_12.\n\nLevel_17 generates Level_18.\n\nMap defined-by Legend. Map defined-by Scale.\n\nDestruction leads-to Rebirth.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nLevel_10 generates Level_11.\n\nPreservation leads-to Destruction.\n\nDestruction leads-to Rebirth.\n\nLevel_6 generates Level_7.\n\nFish has Fin. Fish contains Scale.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nLevel_2 generates Level_3.\n\nMap defined-by Legend. Map defined-by Scale.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta. Alpha links-to Gamma.\n\nAlpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_7 generates Level_8.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta is associated with Gamma. Beta links-to Alpha.\n\nPreservation leads-to Destruction.\n\nBeta is the result of Epsilon. Epsilon correlates with Alpha. Epsilon is associated with Delta. Epsilon causes Gamma.\n\nCreation leads-to Preservation.\n\nBeta links-to Alpha. Beta opposes Delta. Beta opposes Epsilon. Beta is associated with Gamma.\n\nMusic uses Scale. Music uses Note.\n\nLevel_14 generates Level_15.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nLevel_18 generates Level_19.\n\nRebirth leads-to Creation.\n\nAlpha is linked to Epsilon. Delta is linked to Epsilon. Epsilon leads to Beta. Epsilon leads to Gamma.\n\nCreation leads-to Preservation.\n\nLevel_19 generates Level_20.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nLevel_8 generates Level_9.\n\nMusic uses Scale. Music uses Note.\n\nLevel_18 generates Level_19.\n\nRebirth leads-to Creation.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_20 fades-into Void.\n\nRebirth leads-to Creation.\n\nRoot initiates Level_1.\n\nEpsilon correlates with Delta. Epsilon causes Beta. Epsilon is associated with Alpha. Gamma is the result of Epsilon.\n\nLevel_2 generates Level_3.\n\nLevel_18 generates Level_19.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_16 generates Level_17.\n\nLevel_19 generates Level_20.\n\nLevel_9 generates Level_10.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_7 generates Level_8.\n\nBeta correlates with Gamma. Beta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta.\n\nMap defined-by Legend. Map defined-by Scale.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma leads to Alpha. Gamma links-to Epsilon.\n\nRoot initiates Level_1.\n\nLevel_10 generates Level_11.\n\nLevel_16 generates Level_17.\n\nLevel_16 generates Level_17.\n\nLevel_12 generates Level_13.\n\nEpsilon leads to Gamma. Epsilon is associated with Alpha. Beta is the result of Epsilon. Delta is linked to Epsilon.\n\nLevel_10 generates Level_11.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon.\n\nDestruction leads-to Rebirth.\n\nLevel_19 generates Level_20.\n\nLevel_19 generates Level_20.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Alpha is the result of Gamma.\n\nLevel_4 generates Level_5.\n\nRoot initiates Level_1.\n\nGamma is the result of Epsilon. Epsilon causes Beta. Delta is linked to Epsilon. Epsilon is associated with Alpha.\n\nLevel_8 generates Level_9.\n\nLevel_11 generates Level_12.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_5 generates Level_6.\n\nMusic uses Scale. Music uses Note.\n\nLevel_11 generates Level_12.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_19 generates Level_20.\n\nLevel_10 generates Level_11.\n\nLevel_6 generates Level_7.\n\nLevel_6 generates Level_7.\n\nLevel_7 generates Level_8.\n\nFin is a component of Fish. Scale is a component of Fish.\n\nScale is found in Fish. Fin is found in Fish.\n\nLevel_19 generates Level_20.\n\nRebirth leads-to Creation.\n\nLevel_19 generates Level_20.\n\nLevel_20 fades-into Void.\n\nLevel_2 generates Level_3.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta.\n\nLevel_15 generates Level_16.\n\nLevel_16 generates Level_17.\n\nLevel_6 generates Level_7.\n\nLevel_17 generates Level_18.\n\nRoot initiates Level_1.\n\nLevel_20 fades-into Void.\n\nLevel_8 generates Level_9.\n\nLevel_3 generates Level_4.\n\nEpsilon is associated with Delta. Beta is the result of Epsilon. Epsilon is associated with Alpha. Epsilon leads to Gamma.\n\nFish contains Scale. Fish has Fin.\n\nLevel_17 generates Level_18.\n\nLevel_10 generates Level_11.\n\nGamma opposes Delta. Alpha is the result of Gamma. Gamma links-to Epsilon. Gamma links-to Beta.\n\nDestruction leads-to Rebirth.\n\nLevel_16 generates Level_17.\n\nLevel_4 generates Level_5.\n\nLevel_11 generates Level_12.\n\nLevel_10 generates Level_11.\n\nLevel_5 generates Level_6.\n\nLevel_6 generates Level_7.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon. Gamma causes Alpha.\n\nLevel_15 generates Level_16.\n\nLevel_15 generates Level_16.\n\nLevel_2 generates Level_3.\n\nMap defined-by Scale. Map defined-by Legend.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nMusic uses Note. Music uses Scale.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nLevel_10 generates Level_11.\n\nLevel_9 generates Level_10.\n\nLevel_2 generates Level_3.\n\nDestruction leads-to Rebirth.\n\nLevel_5 generates Level_6.\n\nLevel_14 generates Level_15.\n\nLevel_2 generates Level_3.\n\nCreation leads-to Preservation.\n\nLevel_4 generates Level_5.\n\nCreation leads-to Preservation.\n\nLevel_3 generates Level_4.\n\nMusic uses Note. Music uses Scale.\n\nCreation leads-to Preservation.\n\nLevel_1 generates Level_2.\n\nEpsilon causes Beta. Epsilon is associated with Delta. Alpha is linked to Epsilon. Epsilon leads to Gamma.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_4 generates Level_5.\n\nLevel_19 generates Level_20.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta. Gamma is linked to Beta.\n\nLevel_3 generates Level_4.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nPreservation leads-to Destruction.\n\nCreation leads-to Preservation.\n\nLevel_8 generates Level_9.\n\nDestruction leads-to Rebirth.\n\nPreservation leads-to Destruction.\n\nRebirth leads-to Creation.\n\nLevel_20 fades-into Void.\n\nCreation leads-to Preservation.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_13 generates Level_14.\n\nLevel_1 generates Level_2.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon.\n\nMusic uses Note. Music uses Scale.\n\nLevel_12 generates Level_13.\n\nLevel_7 generates Level_8.\n\nLevel_18 generates Level_19.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Epsilon. Beta opposes Delta.\n\nRoot initiates Level_1.\n\nLevel_15 generates Level_16.\n\nLevel_12 generates Level_13.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon. Beta is linked to Delta.\n\nLevel_19 generates Level_20.\n\nLevel_19 generates Level_20.\n\nCreation leads-to Preservation.\n\nDestruction leads-to Rebirth.\n\nCreation leads-to Preservation.\n\nAlpha is linked to Epsilon. Beta is the result of Epsilon. Delta is linked to Epsilon. Epsilon leads to Gamma.\n\nLevel_6 generates Level_7.\n\nLevel_20 fades-into Void.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nDelta links-to Alpha. Beta is linked to Delta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_19 generates Level_20.\n\nLevel_4 generates Level_5.\n\nLevel_7 generates Level_8.\n\nLevel_19 generates Level_20.\n\nRoot initiates Level_1.\n\nDelta links-to Alpha. Delta correlates with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nPreservation leads-to Destruction.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_12 generates Level_13.\n\nRoot initiates Level_1.\n\nLevel_3 generates Level_4.\n\nLevel_11 generates Level_12.\n\nLevel_15 generates Level_16.\n\nThe Fish is characterized by Fin. The Fish is characterized by Scale.\n\nLevel_11 generates Level_12.\n\nLevel_9 generates Level_10.\n\nAlpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon.\n\nBeta is associated with Gamma. Beta links-to Alpha. Beta opposes Epsilon. Beta opposes Delta.\n\nLevel_3 generates Level_4.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nEpsilon leads to Beta. Epsilon causes Gamma. Alpha is linked to Epsilon. Epsilon correlates with Delta.\n\nRebirth leads-to Creation.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta correlates with Beta. Delta links-to Epsilon.\n\nLevel_8 generates Level_9.\n\nPreservation leads-to Destruction.\n\nDelta is associated with Beta. Delta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nLevel_2 generates Level_3.\n\nGamma links-to Epsilon. Gamma leads to Alpha. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_1 generates Level_2.\n\nLevel_12 generates Level_13.\n\nMusic uses Scale. Music uses Note.\n\nLevel_17 generates Level_18.\n\nLevel_17 generates Level_18.\n\nFish has Scale. Fish has Fin.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_17 generates Level_18.\n\nLevel_6 generates Level_7.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_6 generates Level_7.\n\nLevel_10 generates Level_11.\n\nLevel_9 generates Level_10.\n\nLevel_2 generates Level_3.\n\nLevel_13 generates Level_14.\n\nLevel_7 generates Level_8.\n\nCreation leads-to Preservation.\n\nEpsilon causes Beta. Epsilon correlates with Delta. Epsilon triggers Gamma. Epsilon is associated with Alpha.\n\nLevel_19 generates Level_20.\n\nRebirth leads-to Creation.\n\nLevel_2 generates Level_3.\n\nCreation leads-to Preservation.\n\nLevel_7 generates Level_8.\n\nLevel_17 generates Level_18.\n\nLevel_5 generates Level_6.\n\nLevel_13 generates Level_14.\n\nAlpha opposes Delta. Alpha opposes Beta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nMusic uses Note. Music uses Scale.\n\nDestruction leads-to Rebirth.\n\nLevel_19 generates Level_20.\n\nLevel_1 generates Level_2.\n\nMusic uses Scale. Music uses Note.\n\nLevel_6 generates Level_7.\n\nLevel_16 generates Level_17.\n\nMusic uses Scale. Music uses Note.\n\nLevel_14 generates Level_15.\n\nLevel_16 generates Level_17.\n\nLevel_20 fades-into Void.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta.\n\nLevel_3 generates Level_4.\n\nLevel_11 generates Level_12.\n\nLevel_13 generates Level_14.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_9 generates Level_10.\n\nLevel_4 generates Level_5.\n\nThe Fish is characterized by Scale. Fin is found in Fish.\n\nEpsilon leads to Beta. Epsilon correlates with Delta. Epsilon leads to Gamma. Alpha is linked to Epsilon.\n\nLevel_18 generates Level_19.\n\nDestruction leads-to Rebirth.\n\nLevel_20 fades-into Void.\n\nFish contains Fin. The Fish is characterized by Scale.\n\nPreservation leads-to Destruction.\n\nLevel_10 generates Level_11.\n\nLevel_3 generates Level_4.\n\nLevel_10 generates Level_11.\n\nLevel_2 generates Level_3.\n\nLevel_17 generates Level_18.\n\nBeta is the result of Epsilon. Epsilon correlates with Alpha. Epsilon is associated with Delta. Epsilon causes Gamma.\n\nDelta correlates with Beta. Delta links-to Epsilon. Delta links-to Gamma. Delta links-to Alpha.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_5 generates Level_6.\n\nMusic uses Scale. Music uses Note.\n\nLevel_12 generates Level_13.\n\nRebirth leads-to Creation.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma. Delta correlates with Beta.\n\nLevel_15 generates Level_16.\n\nLevel_4 generates Level_5.\n\nLevel_15 generates Level_16.\n\nLevel_6 generates Level_7.\n\nLevel_19 generates Level_20.\n\nLevel_16 generates Level_17.\n\nLevel_11 generates Level_12.\n\nLevel_14 generates Level_15.\n\nLevel_20 fades-into Void.\n\nLevel_18 generates Level_19.\n\nLevel_3 generates Level_4.\n\nMusic uses Note. Music uses Scale.\n\nBeta opposes Delta. Beta is associated with Gamma. Beta opposes Epsilon. Beta links-to Alpha.\n\nDestruction leads-to Rebirth.\n\nLevel_4 generates Level_5.\n\nLevel_19 generates Level_20.\n\nLevel_19 generates Level_20.\n\nLevel_17 generates Level_18.\n\nGamma causes Alpha. Gamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_11 generates Level_12.\n\nLevel_9 generates Level_10.\n\nLevel_11 generates Level_12.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_1 generates Level_2.\n\nLevel_4 generates Level_5.\n\nLevel_19 generates Level_20.\n\nLevel_19 generates Level_20.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nLevel_16 generates Level_17.\n\nAlpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta.\n\nRoot initiates Level_1.\n\nAlpha is the result of Gamma. Gamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_14 generates Level_15.\n\nEpsilon correlates with Delta. Gamma is the result of Epsilon. Epsilon correlates with Alpha. Beta is the result of Epsilon.\n\nLevel_17 generates Level_18.\n\nLevel_7 generates Level_8.\n\nLevel_16 generates Level_17.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_18 generates Level_19.\n\nMap defined-by Legend. Map defined-by Scale.\n\nFish contains Fin. Fish has Scale.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nAlpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta. Alpha opposes Epsilon.\n\nDestruction leads-to Rebirth.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_1 generates Level_2.\n\nLevel_20 fades-into Void.\n\nPreservation leads-to Destruction.\n\nEpsilon causes Beta. Epsilon correlates with Alpha. Epsilon causes Gamma. Epsilon is associated with Delta.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta.\n\nEpsilon is associated with Alpha. Epsilon correlates with Delta. Epsilon leads to Gamma. Epsilon causes Beta.\n\nLevel_15 generates Level_16.\n\nLevel_14 generates Level_15.\n\nRebirth leads-to Creation.\n\nLevel_6 generates Level_7.\n\nRebirth leads-to Creation.\n\nRebirth leads-to Creation.\n\nLevel_15 generates Level_16.\n\nLevel_16 generates Level_17.\n\nDelta links-to Alpha. Beta is linked to Delta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_10 generates Level_11.\n\nLevel_18 generates Level_19.\n\nGamma causes Alpha. Gamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta.\n\nLevel_2 generates Level_3.\n\nDelta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha. Beta is linked to Delta.\n\nRoot initiates Level_1.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta is associated with Beta. Delta links-to Epsilon.\n\nLevel_2 generates Level_3.\n\nLevel_9 generates Level_10.\n\nEpsilon is associated with Alpha. Epsilon leads to Gamma. Epsilon correlates with Delta. Epsilon triggers Beta.\n\nBeta is linked to Delta. Delta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon.\n\nGamma links-to Epsilon. Gamma triggers Alpha. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_14 generates Level_15.\n\nGamma opposes Delta. Gamma links-to Epsilon. Alpha is the result of Gamma. Gamma links-to Beta.\n\nLevel_18 generates Level_19.\n\nLevel_14 generates Level_15.\n\nLevel_13 generates Level_14.\n\nLevel_7 generates Level_8.\n\nDestruction leads-to Rebirth.\n\nLevel_11 generates Level_12.\n\nRoot initiates Level_1.\n\nBeta is the result of Epsilon. Epsilon correlates with Delta. Gamma is the result of Epsilon. Alpha is linked to Epsilon.\n\nLevel_3 generates Level_4.\n\nLevel_16 generates Level_17.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_2 generates Level_3.\n\nLevel_20 fades-into Void.\n\nCreation leads-to Preservation.\n\nLevel_11 generates Level_12.\n\nLevel_14 generates Level_15.\n\nLevel_3 generates Level_4.\n\nDestruction leads-to Rebirth.\n\nLevel_16 generates Level_17.\n\nLevel_17 generates Level_18.\n\nFish has Fin. The Fish is characterized by Scale.\n\nLevel_2 generates Level_3.\n\nLevel_10 generates Level_11.\n\nScale is a component of Fish. Fin is a component of Fish.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nDelta is associated with Beta. Delta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta. Gamma leads to Alpha.\n\nLevel_18 generates Level_19.\n\nCreation leads-to Preservation.\n\nLevel_5 generates Level_6.\n\nLevel_7 generates Level_8.\n\nLevel_13 generates Level_14.\n\nLevel_9 generates Level_10.\n\nLevel_2 generates Level_3.\n\nLevel_15 generates Level_16.\n\nLevel_15 generates Level_16.\n\nLevel_12 generates Level_13.\n\nGamma links-to Epsilon. Gamma triggers Alpha. Gamma links-to Beta. Gamma opposes Delta.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_15 generates Level_16.\n\nLevel_6 generates Level_7.\n\nDestruction leads-to Rebirth.\n\nLevel_10 generates Level_11.\n\nLevel_9 generates Level_10.\n\nFish contains Scale. Fin is a component of Fish.\n\nLevel_10 generates Level_11.\n\nLevel_15 generates Level_16.\n\nLevel_9 generates Level_10.\n\nLevel_10 generates Level_11.\n\nLevel_20 fades-into Void.\n\nLevel_4 generates Level_5.\n\nLevel_12 generates Level_13.\n\nLevel_19 generates Level_20.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta is associated with Gamma. Beta opposes Delta.\n\nLevel_8 generates Level_9.\n\nLevel_2 generates Level_3.\n\nLevel_19 generates Level_20.\n\nScale is a component of Fish. The Fish is characterized by Fin.\n\nPreservation leads-to Destruction.\n\nLevel_11 generates Level_12.\n\nLevel_11 generates Level_12.\n\nMusic uses Note. Music uses Scale.\n\nRebirth leads-to Creation.\n\nGamma links-to Epsilon. Alpha is the result of Gamma. Gamma links-to Beta. Gamma opposes Delta.\n\nEpsilon correlates with Delta. Epsilon correlates with Alpha. Epsilon leads to Gamma. Epsilon leads to Beta.\n\nLevel_14 generates Level_15.\n\nLevel_11 generates Level_12.\n\nLevel_14 generates Level_15.\n\nLevel_14 generates Level_15.\n\nPreservation leads-to Destruction.\n\nLevel_14 generates Level_15.\n\nGamma links-to Epsilon. Alpha is the result of Gamma. Gamma links-to Beta. Gamma opposes Delta.\n\nRebirth leads-to Creation.\n\nLevel_5 generates Level_6.\n\nLevel_14 generates Level_15.\n\nLevel_1 generates Level_2.\n\nBeta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta. Beta opposes Epsilon.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nMusic uses Scale. Music uses Note.\n\nLevel_6 generates Level_7.\n\nLevel_1 generates Level_2.\n\nPreservation leads-to Destruction.\n\nPreservation leads-to Destruction.\n\nLevel_10 generates Level_11.\n\nLevel_1 generates Level_2.\n\nLevel_6 generates Level_7.\n\nLevel_13 generates Level_14.\n\nLevel_10 generates Level_11.\n\nLevel_10 generates Level_11.\n\nBeta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha. Beta is associated with Gamma.\n\nLevel_7 generates Level_8.\n\nLevel_11 generates Level_12.\n\nScale is found in Fish. Fish contains Fin.\n\nLevel_13 generates Level_14.\n\nLevel_16 generates Level_17.\n\nLevel_4 generates Level_5.\n\nLevel_5 generates Level_6.\n\nDestruction leads-to Rebirth.\n\nLevel_17 generates Level_18.\n\nPreservation leads-to Destruction.\n\nLevel_15 generates Level_16.\n\nDelta is associated with Beta. Delta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon.\n\nLevel_13 generates Level_14.\n\nDelta links-to Epsilon. Delta links-to Alpha. Beta is linked to Delta. Delta links-to Gamma.\n\nDestruction leads-to Rebirth.\n\nGamma causes Alpha. Gamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_14 generates Level_15.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nRebirth leads-to Creation.\n\nLevel_12 generates Level_13.\n\nMap defined-by Scale. Map defined-by Legend.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Alpha is the result of Gamma.\n\nDestruction leads-to Rebirth.\n\nLevel_18 generates Level_19.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon.\n\nBeta opposes Delta. Beta opposes Epsilon. Beta correlates with Gamma. Beta links-to Alpha.\n\nLevel_16 generates Level_17.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nBeta links-to Alpha. Beta opposes Epsilon. Gamma is linked to Beta. Beta opposes Delta.\n\nCreation leads-to Preservation.\n\nLevel_7 generates Level_8.\n\nEpsilon causes Beta. Delta is linked to Epsilon. Epsilon triggers Gamma. Epsilon correlates with Alpha.\n\nMusic uses Note. Music uses Scale.\n\nLevel_6 generates Level_7.\n\nRoot initiates Level_1.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nLevel_18 generates Level_19.\n\nLevel_8 generates Level_9.\n\nLevel_4 generates Level_5.\n\nLevel_8 generates Level_9.\n\nLevel_14 generates Level_15.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma causes Alpha. Gamma opposes Delta.\n\nDestruction leads-to Rebirth.\n\nLevel_9 generates Level_10.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_2 generates Level_3.\n\nLevel_6 generates Level_7.\n\nMusic uses Scale. Music uses Note.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nMusic uses Scale. Music uses Note.\n\nLevel_5 generates Level_6.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nDestruction leads-to Rebirth.\n\nLevel_4 generates Level_5.\n\nMusic uses Note. Music uses Scale.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_7 generates Level_8.\n\nLevel_4 generates Level_5.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma links-to Beta. Gamma leads to Alpha.\n\nPreservation leads-to Destruction.\n\nLevel_4 generates Level_5.\n\nLevel_14 generates Level_15.\n\nFish contains Fin. Scale is found in Fish.\n\nLevel_19 generates Level_20.\n\nLevel_1 generates Level_2.\n\nBeta links-to Alpha. Beta correlates with Gamma. Beta opposes Delta. Beta opposes Epsilon.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nDestruction leads-to Rebirth.\n\nRebirth leads-to Creation.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nDelta links-to Alpha. Delta links-to Gamma. Beta is linked to Delta. Delta links-to Epsilon.\n\nLevel_1 generates Level_2.\n\nLevel_4 generates Level_5.\n\nLevel_20 fades-into Void.\n\nLevel_19 generates Level_20.\n\nThe Fish is characterized by Fin. Scale is a component of Fish.\n\nDestruction leads-to Rebirth.\n\nPreservation leads-to Destruction.\n\nLevel_19 generates Level_20.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nRebirth leads-to Creation.\n\nCreation leads-to Preservation.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_19 generates Level_20.\n\nLevel_8 generates Level_9.\n\nLevel_10 generates Level_11.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nLevel_14 generates Level_15.\n\nLevel_2 generates Level_3.\n\nPreservation leads-to Destruction.\n\nLevel_4 generates Level_5.\n\nRoot initiates Level_1.\n\nFin is found in Fish. Fish contains Scale.\n\nGamma is the result of Epsilon. Epsilon correlates with Delta. Epsilon correlates with Alpha. Epsilon triggers Beta.\n\nLevel_15 generates Level_16.\n\nFin is a component of Fish. Scale is a component of Fish.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_6 generates Level_7.\n\nBeta correlates with Gamma. Beta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha.\n\nLevel_16 generates Level_17.\n\nCreation leads-to Preservation.\n\nLevel_2 generates Level_3.\n\nRoot initiates Level_1.\n\nEpsilon causes Gamma. Epsilon causes Beta. Alpha is linked to Epsilon. Delta is linked to Epsilon.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon. Beta is linked to Delta.\n\nLevel_18 generates Level_19.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_3 generates Level_4.\n\nGamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma leads to Alpha. Gamma links-to Epsilon.\n\nLevel_16 generates Level_17.\n\nLevel_12 generates Level_13.\n\nCreation leads-to Preservation.\n\nLevel_1 generates Level_2.\n\nLevel_20 fades-into Void.\n\nLevel_3 generates Level_4.\n\nLevel_14 generates Level_15.\n\nCreation leads-to Preservation.\n\nLevel_16 generates Level_17.\n\nBeta links-to Alpha. Beta is associated with Gamma. Beta opposes Epsilon. Beta opposes Delta.\n\nLevel_2 generates Level_3.\n\nLevel_3 generates Level_4.\n\nLevel_12 generates Level_13.\n\nLevel_1 generates Level_2.\n\nLevel_15 generates Level_16.\n\nMusic uses Scale. Music uses Note.\n\nDestruction leads-to Rebirth.\n\nLevel_20 fades-into Void.\n\nDelta links-to Epsilon. Delta links-to Gamma. Beta is linked to Delta. Delta links-to Alpha.\n\nLevel_6 generates Level_7.\n\nLevel_11 generates Level_12.\n\nLevel_15 generates Level_16.\n\nBeta opposes Delta. Beta links-to Alpha. Beta correlates with Gamma. Beta opposes Epsilon.\n\nAlpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Beta.\n\nLevel_9 generates Level_10.\n\nLevel_12 generates Level_13.\n\nLevel_9 generates Level_10.\n\nLevel_15 generates Level_16.\n\nLevel_9 generates Level_10.\n\nLevel_11 generates Level_12.\n\nLevel_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nAlpha opposes Delta. Alpha opposes Beta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nLevel_5 generates Level_6.\n\nLevel_4 generates Level_5.\n\nLevel_16 generates Level_17.\n\nMap defined-by Legend. Map defined-by Scale.\n\nRoot initiates Level_1.\n\nLevel_9 generates Level_10.\n\nLevel_8 generates Level_9.\n\nLevel_14 generates Level_15.\n\nBeta links-to Alpha. Beta opposes Epsilon. Beta opposes Delta. Gamma is linked to Beta.\n\nLevel_14 generates Level_15.\n\nCreation leads-to Preservation.\n\nLevel_6 generates Level_7.\n\nRoot initiates Level_1.\n\nLevel_3 generates Level_4.\n\nLevel_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nLevel_19 generates Level_20.\n\nPreservation leads-to Destruction.\n\nLevel_11 generates Level_12.\n\nLevel_5 generates Level_6.\n\nPreservation leads-to Destruction.\n\nLevel_4 generates Level_5.\n\nDelta links-to Epsilon. Delta links-to Gamma. Delta links-to Alpha. Delta correlates with Beta.\n\nMusic uses Scale. Music uses Note.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha. Beta is associated with Gamma.\n\nLevel_1 generates Level_2.\n\nLevel_16 generates Level_17.\n\nRoot initiates Level_1.\n\nRebirth leads-to Creation.\n\nLevel_4 generates Level_5.\n\nLevel_10 generates Level_11.\n\nLevel_14 generates Level_15.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon. Delta is associated with Beta.\n\nLevel_8 generates Level_9.\n\nLevel_20 fades-into Void.\n\nLevel_5 generates Level_6.\n\nLevel_4 generates Level_5.\n\nAlpha is the result of Gamma. Gamma opposes Delta. Gamma links-to Epsilon. Gamma links-to Beta.\n\nLevel_7 generates Level_8.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Epsilon. Beta opposes Delta.\n\nGamma is linked to Beta. Beta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha.\n\nEpsilon triggers Beta. Epsilon causes Gamma. Delta is linked to Epsilon. Epsilon is associated with Alpha.\n\nLevel_11 generates Level_12.\n\nMusic uses Note. Music uses Scale.\n\nLevel_10 generates Level_11.\n\nDelta links-to Gamma. Delta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon.\n\nDelta links-to Gamma. Delta links-to Alpha. Beta is linked to Delta. Delta links-to Epsilon.\n\nLevel_2 generates Level_3.\n\nMusic uses Note. Music uses Scale.\n\nDestruction leads-to Rebirth.\n\nEpsilon triggers Beta. Epsilon leads to Gamma. Alpha is linked to Epsilon. Delta is linked to Epsilon.\n\nLevel_7 generates Level_8.\n\nDestruction leads-to Rebirth.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_12 generates Level_13.\n\nAlpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Beta.\n\nLevel_3 generates Level_4.\n\nAlpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta.\n\nCreation leads-to Preservation.\n\nAlpha is linked to Epsilon. Beta is the result of Epsilon. Epsilon correlates with Delta. Gamma is the result of Epsilon.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nLevel_2 generates Level_3.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nLevel_5 generates Level_6.\n\nRebirth leads-to Creation.\n\nLevel_6 generates Level_7.\n\nEpsilon correlates with Delta. Epsilon causes Gamma. Epsilon triggers Beta. Epsilon is associated with Alpha.\n\nCreation leads-to Preservation.\n\nBeta opposes Delta. Beta links-to Alpha. Beta opposes Epsilon. Beta is associated with Gamma.\n\nLevel_13 generates Level_14.\n\nScale is a component of Fish. Fin is a component of Fish.\n\nLevel_3 generates Level_4.\n\nLevel_2 generates Level_3.\n\nCreation leads-to Preservation.\n\nEpsilon is associated with Delta. Alpha is linked to Epsilon. Epsilon leads to Gamma. Epsilon triggers Beta.\n\nLevel_6 generates Level_7.\n\nMap defined-by Scale. Map defined-by Legend.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Beta. Alpha opposes Epsilon.\n\nLevel_2 generates Level_3.\n\nMap defined-by Scale. Map defined-by Legend.\n\nFin is found in Fish. Fish contains Scale.\n\nCreation leads-to Preservation.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_12 generates Level_13.\n\nLevel_14 generates Level_15.\n\nDestruction leads-to Rebirth.\n\nLevel_16 generates Level_17.\n\nLevel_11 generates Level_12.\n\nDelta links-to Epsilon. Delta links-to Gamma. Delta is associated with Beta. Delta links-to Alpha.\n\nFish has Fin. Scale is found in Fish.\n\nEpsilon is associated with Alpha. Epsilon causes Beta. Epsilon leads to Gamma. Epsilon is associated with Delta.\n\nLevel_12 generates Level_13.\n\nLevel_14 generates Level_15.\n\nLevel_9 generates Level_10.\n\nLevel_15 generates Level_16.\n\nLevel_12 generates Level_13.\n\nLevel_12 generates Level_13.\n\nDestruction leads-to Rebirth.\n\nLevel_7 generates Level_8.\n\nLevel_7 generates Level_8.\n\nBeta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha. Gamma is linked to Beta.\n\nLevel_2 generates Level_3.\n\nLevel_8 generates Level_9.\n\nLevel_20 fades-into Void.\n\nLevel_10 generates Level_11.\n\nLevel_3 generates Level_4.\n\nLevel_4 generates Level_5.\n\nDestruction leads-to Rebirth.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_17 generates Level_18.\n\nLevel_3 generates Level_4.\n\nLevel_2 generates Level_3.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon. Delta is associated with Beta.\n\nLevel_12 generates Level_13.\n\nFish has Scale. Fish contains Fin.\n\nDestruction leads-to Rebirth.\n\nLevel_13 generates Level_14.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_18 generates Level_19.\n\nBeta correlates with Gamma. Beta links-to Alpha. Beta opposes Delta. Beta opposes Epsilon.\n\nPreservation leads-to Destruction.\n\nAlpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta. Alpha opposes Beta.\n\nCreation leads-to Preservation.\n\nLevel_8 generates Level_9.\n\nLevel_18 generates Level_19.\n\nEpsilon is associated with Delta. Epsilon leads to Gamma. Epsilon is associated with Alpha. Beta is the result of Epsilon.\n\nDelta links-to Alpha. Beta is linked to Delta. Delta links-to Gamma. Delta links-to Epsilon.\n\nMusic uses Scale. Music uses Note.\n\nLevel_12 generates Level_13.\n\nPreservation leads-to Destruction.\n\nLevel_18 generates Level_19.\n\nLevel_5 generates Level_6.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_6 generates Level_7.\n\nEpsilon is associated with Delta. Gamma is the result of Epsilon. Alpha is linked to Epsilon. Epsilon triggers Beta.\n\nLevel_18 generates Level_19.\n\nLevel_1 generates Level_2.\n\nLevel_16 generates Level_17.\n\nCreation leads-to Preservation.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma leads to Alpha. Gamma links-to Epsilon.\n\nLevel_18 generates Level_19.\n\nLevel_14 generates Level_15.\n\nLevel_20 fades-into Void.\n\nLevel_7 generates Level_8.\n\nLevel_11 generates Level_12.\n\nLevel_10 generates Level_11.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nCreation leads-to Preservation.\n\nLevel_1 generates Level_2.\n\nLevel_19 generates Level_20.\n\nDestruction leads-to Rebirth.\n\nLevel_16 generates Level_17.\n\nLevel_20 fades-into Void.\n\nLevel_9 generates Level_10.\n\nLevel_13 generates Level_14.\n\nLevel_11 generates Level_12.\n\nLevel_17 generates Level_18.\n\nLevel_5 generates Level_6.\n\nPreservation leads-to Destruction.\n\nLevel_7 generates Level_8.\n\nBeta correlates with Gamma. Beta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Gamma leads to Alpha.\n\nLevel_7 generates Level_8.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nMusic uses Scale. Music uses Note.\n\nAlpha links-to Gamma. Alpha opposes Beta. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_6 generates Level_7.\n\nRebirth leads-to Creation.\n\nRebirth leads-to Creation.\n\nDestruction leads-to Rebirth.\n\nLevel_13 generates Level_14.\n\nRebirth leads-to Creation.\n\nLevel_4 generates Level_5.\n\nScale is a component of Fish. Fish has Fin.\n\nRoot initiates Level_1.\n\nLevel_11 generates Level_12.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma leads to Alpha. Gamma opposes Delta.\n\nLevel_12 generates Level_13.\n\nLevel_16 generates Level_17.\n\nBeta opposes Delta. Beta correlates with Gamma. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_12 generates Level_13.\n\nCreation leads-to Preservation.\n\nPreservation leads-to Destruction.\n\nBeta is linked to Delta. Delta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha.\n\nEpsilon is associated with Alpha. Epsilon correlates with Delta. Gamma is the result of Epsilon. Epsilon leads to Beta.\n\nLevel_13 generates Level_14.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_17 generates Level_18.\n\nLevel_8 generates Level_9.\n\nLevel_17 generates Level_18.\n\nLevel_14 generates Level_15.\n\nCreation leads-to Preservation.\n\nLevel_15 generates Level_16.\n\nPreservation leads-to Destruction.\n\nLevel_20 fades-into Void.\n\nLevel_12 generates Level_13.\n\nLevel_18 generates Level_19.\n\nLevel_16 generates Level_17.\n\nRoot initiates Level_1.\n\nFish contains Fin. Scale is found in Fish.\n\nRebirth leads-to Creation.\n\nMap defined-by Scale. Map defined-by Legend.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_20 fades-into Void.\n\nLevel_10 generates Level_11.\n\nLevel_13 generates Level_14.\n\nLevel_12 generates Level_13.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma. Beta is linked to Delta.\n\nGamma links-to Beta. Alpha is the result of Gamma. Gamma links-to Epsilon. Gamma opposes Delta.\n\nLevel_8 generates Level_9.\n\nLevel_5 generates Level_6.\n\nLevel_14 generates Level_15.\n\nLevel_8 generates Level_9.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_18 generates Level_19.\n\nLevel_1 generates Level_2.\n\nThe Fish is characterized by Scale. Fish contains Fin.\n\nLevel_8 generates Level_9.\n\nRoot initiates Level_1.\n\nLevel_20 fades-into Void.\n\nRoot initiates Level_1.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nLevel_16 generates Level_17.\n\nLevel_9 generates Level_10.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon. Gamma causes Alpha.\n\nLevel_7 generates Level_8.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta.\n\nLevel_9 generates Level_10.\n\nAlpha is the result of Gamma. Gamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta.\n\nLevel_8 generates Level_9.\n\nDestruction leads-to Rebirth.\n\nFish has Fin. Scale is found in Fish.\n\nLevel_4 generates Level_5.\n\nLevel_8 generates Level_9.\n\nLevel_19 generates Level_20.\n\nLevel_16 generates Level_17.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nLevel_3 generates Level_4.\n\nBeta correlates with Gamma. Beta opposes Delta. Beta links-to Alpha. Beta opposes Epsilon.\n\nCreation leads-to Preservation.\n\nLevel_10 generates Level_11.\n\nEpsilon causes Beta. Epsilon leads to Gamma. Epsilon is associated with Alpha. Epsilon correlates with Delta.\n\nDestruction leads-to Rebirth.\n\nLevel_3 generates Level_4.\n\nLevel_3 generates Level_4.\n\nCreation leads-to Preservation.\n\nDestruction leads-to Rebirth.\n\nLevel_20 fades-into Void.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon.\n\nLevel_15 generates Level_16.\n\nLevel_14 generates Level_15.\n\nLevel_14 generates Level_15.\n\nLevel_7 generates Level_8.\n\nPreservation leads-to Destruction.\n\nLevel_20 fades-into Void.\n\nAlpha opposes Epsilon. Alpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma.\n\nLevel_14 generates Level_15.\n\nRoot initiates Level_1.\n\nLevel_17 generates Level_18.\n\nLevel_19 generates Level_20.\n\nLevel_7 generates Level_8.\n\nBeta links-to Alpha. Beta opposes Delta. Beta opposes Epsilon. Gamma is linked to Beta.\n\nLevel_6 generates Level_7.\n\nLevel_4 generates Level_5.\n\nLevel_14 generates Level_15.\n\nLevel_6 generates Level_7.\n\nDestruction leads-to Rebirth.\n\nRebirth leads-to Creation.\n\nPreservation leads-to Destruction.\n\nCreation leads-to Preservation.\n\nFish has Fin. Fish contains Scale.\n\nLevel_8 generates Level_9.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma.\n\nLevel_12 generates Level_13.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nDestruction leads-to Rebirth.\n\nLevel_10 generates Level_11.\n\nBeta opposes Epsilon. Beta correlates with Gamma. Beta links-to Alpha. Beta opposes Delta.\n\nLevel_12 generates Level_13.\n\nLevel_4 generates Level_5.\n\nBeta opposes Epsilon. Gamma is linked to Beta. Beta links-to Alpha. Beta opposes Delta.\n\nGamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_12 generates Level_13.\n\nAlpha is the result of Gamma. Gamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta.\n\nLevel_9 generates Level_10.\n\nFin is found in Fish. Scale is a component of Fish.\n\nLevel_15 generates Level_16.\n\nFin is a component of Fish. Fish contains Scale.\n\nLevel_16 generates Level_17.\n\nLevel_13 generates Level_14.\n\nPreservation leads-to Destruction.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_7 generates Level_8.\n\nLevel_1 generates Level_2.\n\nBeta opposes Delta. Beta is associated with Gamma. Beta links-to Alpha. Beta opposes Epsilon.\n\nLevel_5 generates Level_6.\n\nGamma triggers Alpha. Gamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_10 generates Level_11.\n\nLevel_15 generates Level_16.\n\nBeta opposes Delta. Beta links-to Alpha. Beta opposes Epsilon. Beta is associated with Gamma.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_16 generates Level_17.\n\nEpsilon correlates with Delta. Epsilon triggers Gamma. Epsilon triggers Beta. Alpha is linked to Epsilon.\n\nLevel_11 generates Level_12.\n\nLevel_16 generates Level_17.\n\nLevel_19 generates Level_20.\n\nAlpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon. Alpha opposes Beta.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_2 generates Level_3.\n\nLevel_20 fades-into Void.\n\nLevel_16 generates Level_17.\n\nMusic uses Scale. Music uses Note.\n\nLevel_3 generates Level_4.\n\nLevel_4 generates Level_5.\n\nLevel_8 generates Level_9.\n\nLevel_17 generates Level_18.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_7 generates Level_8.\n\nPreservation leads-to Destruction.\n\nLevel_9 generates Level_10.\n\nLevel_8 generates Level_9.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nCreation leads-to Preservation.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_20 fades-into Void.\n\nPreservation leads-to Destruction.\n\nLevel_16 generates Level_17.\n\nLevel_18 generates Level_19.\n\nDestruction leads-to Rebirth.\n\nMusic uses Note. Music uses Scale.\n\nLevel_12 generates Level_13.\n\nLevel_7 generates Level_8.\n\nLevel_12 generates Level_13.\n\nLevel_9 generates Level_10.\n\nLevel_10 generates Level_11.\n\nLevel_5 generates Level_6.\n\nMusic uses Note. Music uses Scale.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta is associated with Beta. Delta links-to Epsilon.\n\nRebirth leads-to Creation.\n\nCreation leads-to Preservation.\n\nLevel_11 generates Level_12.\n\nMap defined-by Scale. Map defined-by Legend.\n\nDelta links-to Gamma. Delta is associated with Beta. Delta links-to Alpha. Delta links-to Epsilon.\n\nRoot initiates Level_1.\n\nPreservation leads-to Destruction.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta.\n\nLevel_7 generates Level_8.\n\nLevel_12 generates Level_13.\n\nLevel_16 generates Level_17.\n\nPreservation leads-to Destruction.\n\nDestruction leads-to Rebirth.\n\nLevel_12 generates Level_13.\n\nLevel_6 generates Level_7.\n\nLevel_9 generates Level_10.\n\nFin is found in Fish. The Fish is characterized by Scale.\n\nLevel_19 generates Level_20.\n\nLevel_14 generates Level_15.\n\nLevel_1 generates Level_2.\n\nLevel_17 generates Level_18.\n\nMap defined-by Scale. Map defined-by Legend.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_12 generates Level_13.\n\nLevel_11 generates Level_12.\n\nLevel_20 fades-into Void.\n\nLevel_19 generates Level_20.\n\nLevel_14 generates Level_15.\n\nMusic uses Scale. Music uses Note.\n\nLevel_1 generates Level_2.\n\nLevel_11 generates Level_12.\n\nLevel_3 generates Level_4.\n\nLevel_7 generates Level_8.\n\nRebirth leads-to Creation.\n\nLevel_12 generates Level_13.\n\nLevel_6 generates Level_7.\n\nLevel_11 generates Level_12.\n\nRoot initiates Level_1.\n\nLevel_17 generates Level_18.\n\nLevel_6 generates Level_7.\n\nLevel_20 fades-into Void.\n\nThe Fish is characterized by Scale. Fin is found in Fish.\n\nLevel_16 generates Level_17.\n\nLevel_17 generates Level_18.\n\nLevel_12 generates Level_13.\n\nLevel_3 generates Level_4.\n\nLevel_5 generates Level_6.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nRoot initiates Level_1.\n\nLevel_17 generates Level_18.\n\nLevel_18 generates Level_19.\n\nLevel_3 generates Level_4.\n\nLevel_6 generates Level_7.\n\nCreation leads-to Preservation.\n\nLevel_12 generates Level_13.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_5 generates Level_6.\n\nLevel_5 generates Level_6.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta. Gamma triggers Alpha.\n\nLevel_6 generates Level_7.\n\nLevel_9 generates Level_10.\n\nLevel_18 generates Level_19.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_11 generates Level_12.\n\nLevel_20 fades-into Void.\n\nLevel_14 generates Level_15.\n\nLevel_7 generates Level_8.\n\nLevel_8 generates Level_9.\n\nLevel_16 generates Level_17.\n\nLevel_17 generates Level_18.\n\nEpsilon is associated with Alpha. Epsilon leads to Gamma. Epsilon leads to Beta. Delta is linked to Epsilon.\n\nLevel_2 generates Level_3.\n\nLevel_13 generates Level_14.\n\nLevel_14 generates Level_15.\n\nLevel_9 generates Level_10.\n\nLevel_15 generates Level_16.\n\nLevel_19 generates Level_20.\n\nPreservation leads-to Destruction.\n\nLevel_19 generates Level_20.\n\nGamma causes Alpha. Gamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon.\n\nDelta links-to Epsilon. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Alpha.\n\nLevel_11 generates Level_12.\n\nRebirth leads-to Creation.\n\nLevel_4 generates Level_5.\n\nLevel_1 generates Level_2.\n\nPreservation leads-to Destruction.\n\nEpsilon triggers Beta. Epsilon leads to Gamma. Epsilon is associated with Alpha. Delta is linked to Epsilon.\n\nLevel_19 generates Level_20.\n\nLevel_14 generates Level_15.\n\nLevel_3 generates Level_4.\n\nLevel_8 generates Level_9.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nLevel_10 generates Level_11.\n\nLevel_11 generates Level_12.\n\nLevel_15 generates Level_16.\n\nCreation leads-to Preservation.\n\nLevel_9 generates Level_10.\n\nLevel_16 generates Level_17.\n\nCreation leads-to Preservation.\n\nLevel_4 generates Level_5.\n\nCreation leads-to Preservation.\n\nLevel_15 generates Level_16.\n\nGamma triggers Alpha. Gamma opposes Delta. Gamma links-to Epsilon. Gamma links-to Beta.\n\nLevel_9 generates Level_10.\n\nRebirth leads-to Creation.\n\nFish has Scale. Fin is found in Fish.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta is associated with Beta. Delta links-to Epsilon.\n\nLevel_17 generates Level_18.\n\nDestruction leads-to Rebirth.\n\nEpsilon leads to Gamma. Epsilon is associated with Alpha. Epsilon triggers Beta. Delta is linked to Epsilon.\n\nLevel_7 generates Level_8.\n\nLevel_12 generates Level_13.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma causes Alpha. Gamma opposes Delta.\n\nLevel_8 generates Level_9.\n\nLevel_6 generates Level_7.\n\nLevel_8 generates Level_9.\n\nMap defined-by Legend. Map defined-by Scale.\n\nGamma links-to Beta. Gamma opposes Delta. Gamma links-to Epsilon. Gamma leads to Alpha.\n\nMap defined-by Legend. Map defined-by Scale.\n\nRoot initiates Level_1.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nMusic uses Note. Music uses Scale.\n\nDestruction leads-to Rebirth.\n\nLevel_9 generates Level_10.\n\nLevel_19 generates Level_20.\n\nDelta links-to Gamma. Delta links-to Epsilon. Delta links-to Alpha. Delta is associated with Beta.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_17 generates Level_18.\n\nLevel_4 generates Level_5.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nLevel_11 generates Level_12.\n\nLevel_7 generates Level_8.\n\nFish contains Scale. The Fish is characterized by Fin.\n\nLevel_19 generates Level_20.\n\nLevel_4 generates Level_5.\n\nLevel_20 fades-into Void.\n\nFish has Scale. Fish has Fin.\n\nGamma links-to Beta. Gamma triggers Alpha. Gamma opposes Delta. Gamma links-to Epsilon.\n\nLevel_6 generates Level_7.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_16 generates Level_17.\n\nLevel_11 generates Level_12.\n\nLevel_1 generates Level_2.\n\nLevel_5 generates Level_6.\n\nLevel_8 generates Level_9.\n\nLevel_10 generates Level_11.\n\nLevel_1 generates Level_2.\n\nLevel_7 generates Level_8.\n\nLevel_4 generates Level_5.\n\nLevel_9 generates Level_10.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nThe Fish is characterized by Fin. The Fish is characterized by Scale.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma causes Alpha. Gamma opposes Delta.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_2 generates Level_3.\n\nBeta opposes Delta. Beta opposes Epsilon. Beta is associated with Gamma. Beta links-to Alpha.\n\nLevel_4 generates Level_5.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta correlates with Beta. Delta links-to Epsilon.\n\nLevel_18 generates Level_19.\n\nLevel_8 generates Level_9.\n\nLevel_9 generates Level_10.\n\nPreservation leads-to Destruction.\n\nLevel_2 generates Level_3.\n\nLevel_17 generates Level_18.\n\nLevel_1 generates Level_2.\n\nLevel_17 generates Level_18.\n\nLevel_15 generates Level_16.\n\nLevel_15 generates Level_16.\n\nLevel_9 generates Level_10.\n\nMusic uses Note. Music uses Scale.\n\nLevel_14 generates Level_15.\n\nBeta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta. Beta is associated with Gamma.\n\nLevel_1 generates Level_2.\n\nLevel_8 generates Level_9.\n\nLevel_19 generates Level_20.\n\nLevel_7 generates Level_8.\n\nLevel_18 generates Level_19.\n\nLevel_1 generates Level_2.\n\nDelta links-to Alpha. Delta correlates with Beta. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_5 generates Level_6.\n\nLevel_7 generates Level_8.\n\nLevel_3 generates Level_4.\n\nLevel_16 generates Level_17.\n\nLevel_18 generates Level_19.\n\nLevel_6 generates Level_7.\n\nDestruction leads-to Rebirth.\n\nLevel_17 generates Level_18.\n\nLevel_19 generates Level_20.\n\nCreation leads-to Preservation.\n\nCreation leads-to Preservation.\n\nLevel_5 generates Level_6.\n\nLevel_18 generates Level_19.\n\nLevel_7 generates Level_8.\n\nLevel_3 generates Level_4.\n\nLevel_19 generates Level_20.\n\nLevel_9 generates Level_10.\n\nLevel_3 generates Level_4.\n\nLevel_11 generates Level_12.\n\nLevel_17 generates Level_18.\n\nLevel_20 fades-into Void.\n\nLevel_10 generates Level_11.\n\nCreation leads-to Preservation.\n\nLevel_19 generates Level_20.\n\nLevel_3 generates Level_4.\n\nLevel_12 generates Level_13.\n\nLevel_4 generates Level_5.\n\nLevel_13 generates Level_14.\n\nLevel_1 generates Level_2.\n\nEpsilon triggers Gamma. Epsilon correlates with Delta. Epsilon causes Beta. Epsilon correlates with Alpha.\n\nLevel_5 generates Level_6.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_2 generates Level_3.\n\nMusic uses Scale. Music uses Note.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nThe Fish is characterized by Scale. Fish has Fin.\n\nLevel_19 generates Level_20.\n\nLevel_18 generates Level_19.\n\nLevel_3 generates Level_4.\n\nBeta correlates with Gamma. Beta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_13 generates Level_14.\n\nAlpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Beta.\n\nAlpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Beta.\n\nLevel_17 generates Level_18.\n\nMap defined-by Legend. Map defined-by Scale.\n\nRebirth leads-to Creation.\n\nLevel_3 generates Level_4.\n\nLevel_15 generates Level_16.\n\nLevel_14 generates Level_15.\n\nLevel_5 generates Level_6.\n\nLevel_6 generates Level_7.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nLevel_12 generates Level_13.\n\nLevel_14 generates Level_15.\n\nLevel_13 generates Level_14.\n\nRoot initiates Level_1.\n\nLevel_20 fades-into Void.\n\nGamma links-to Beta. Gamma opposes Delta. Gamma causes Alpha. Gamma links-to Epsilon.\n\nLevel_19 generates Level_20.\n\nDestruction leads-to Rebirth.\n\nRebirth leads-to Creation.\n\nScale is a component of Fish. Fin is found in Fish.\n\nLevel_3 generates Level_4.\n\nLevel_14 generates Level_15.\n\nLevel_3 generates Level_4.\n\nRoot initiates Level_1.\n\nRoot initiates Level_1.\n\nDestruction leads-to Rebirth.\n\nCreation leads-to Preservation.\n\nLevel_6 generates Level_7.\n\nDelta correlates with Beta. Delta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_7 generates Level_8.\n\nLevel_8 generates Level_9.\n\nAlpha opposes Epsilon. Alpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta.\n\nLevel_10 generates Level_11.\n\nLevel_19 generates Level_20.\n\nPreservation leads-to Destruction.\n\nAlpha links-to Gamma. Alpha opposes Beta. Alpha opposes Epsilon. Alpha opposes Delta.\n\nAlpha opposes Epsilon. Alpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta.\n\nLevel_18 generates Level_19.\n\nLevel_2 generates Level_3.\n\nCreation leads-to Preservation.\n\nLevel_10 generates Level_11.\n\nLevel_8 generates Level_9.\n\nRebirth leads-to Creation.\n\nLevel_16 generates Level_17.\n\nThe Fish is characterized by Fin. Fish has Scale.\n\nDestruction leads-to Rebirth.\n\nLevel_10 generates Level_11.\n\nRoot initiates Level_1.\n\nLevel_4 generates Level_5.\n\nGamma links-to Beta. Gamma triggers Alpha. Gamma opposes Delta. Gamma links-to Epsilon.\n\nLevel_10 generates Level_11.\n\nLevel_19 generates Level_20.\n\nRebirth leads-to Creation.\n\nLevel_18 generates Level_19.\n\nMusic uses Note. Music uses Scale.\n\nLevel_15 generates Level_16.\n\nLevel_11 generates Level_12.\n\nDelta links-to Gamma. Delta links-to Epsilon. Delta correlates with Beta. Delta links-to Alpha.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nBeta links-to Alpha. Beta opposes Epsilon. Gamma is linked to Beta. Beta opposes Delta.\n\nPreservation leads-to Destruction.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_16 generates Level_17.\n\nCreation leads-to Preservation.\n\nRebirth leads-to Creation.\n\nLevel_4 generates Level_5.\n\nDelta links-to Alpha. Delta links-to Gamma. Delta links-to Epsilon. Delta is associated with Beta.\n\nAlpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Beta.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_19 generates Level_20.\n\nLevel_20 fades-into Void.\n\nLevel_9 generates Level_10.\n\nGamma opposes Delta. Gamma links-to Epsilon. Alpha is the result of Gamma. Gamma links-to Beta.\n\nBeta is associated with Gamma. Beta opposes Delta. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_7 generates Level_8.\n\nBeta correlates with Gamma. Beta opposes Epsilon. Beta links-to Alpha. Beta opposes Delta.\n\nLevel_7 generates Level_8.\n\nRoot initiates Level_1.\n\nLevel_19 generates Level_20.\n\nLevel_8 generates Level_9.\n\nLevel_16 generates Level_17.\n\nLevel_5 generates Level_6.\n\nLevel_13 generates Level_14.\n\nLevel_5 generates Level_6.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_19 generates Level_20.\n\nLevel_2 generates Level_3.\n\nRebirth leads-to Creation.\n\nBeta opposes Delta. Beta opposes Epsilon. Beta correlates with Gamma. Beta links-to Alpha.\n\nLevel_11 generates Level_12.\n\nLevel_9 generates Level_10.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_17 generates Level_18.\n\nPreservation leads-to Destruction.\n\nLevel_7 generates Level_8.\n\nLevel_17 generates Level_18.\n\nFin is found in Fish. Fish contains Scale.\n\nLevel_8 generates Level_9.\n\nPreservation leads-to Destruction.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma triggers Alpha. Gamma links-to Beta.\n\nLevel_9 generates Level_10.\n\nLevel_18 generates Level_19.\n\nLevel_19 generates Level_20.\n\nLevel_5 generates Level_6.\n\nLevel_7 generates Level_8.\n\nLevel_10 generates Level_11.\n\nLevel_3 generates Level_4.\n\nLevel_17 generates Level_18.\n\nCreation leads-to Preservation.\n\nRebirth leads-to Creation.\n\nLevel_10 generates Level_11.\n\nAlpha is linked to Epsilon. Epsilon leads to Gamma. Epsilon correlates with Delta. Beta is the result of Epsilon.\n\nRoot initiates Level_1.\n\nLevel_9 generates Level_10.\n\nDelta links-to Epsilon. Delta links-to Gamma. Beta is linked to Delta. Delta links-to Alpha.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_20 fades-into Void.\n\nLevel_8 generates Level_9.\n\nLevel_7 generates Level_8.\n\nBeta opposes Delta. Beta links-to Alpha. Beta is associated with Gamma. Beta opposes Epsilon.\n\nCreation leads-to Preservation.\n\nLevel_5 generates Level_6.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nDestruction leads-to Rebirth.\n\nRoot initiates Level_1.\n\nMusic uses Scale. Music uses Note.\n\nLevel_20 fades-into Void.\n\nLevel_5 generates Level_6.\n\nLevel_20 fades-into Void.\n\nPreservation leads-to Destruction.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_7 generates Level_8.\n\nLevel_20 fades-into Void.\n\nRoot initiates Level_1.\n\nAlpha opposes Delta. Alpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Beta.\n\nRebirth leads-to Creation.\n\nPreservation leads-to Destruction.\n\nLevel_11 generates Level_12.\n\nDestruction leads-to Rebirth.\n\nLevel_11 generates Level_12.\n\nLevel_18 generates Level_19.\n\nLevel_20 fades-into Void.\n\nLevel_6 generates Level_7.\n\nDestruction leads-to Rebirth.\n\nLevel_7 generates Level_8.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon. Gamma leads to Alpha.\n\nLevel_13 generates Level_14.\n\nLevel_13 generates Level_14.\n\nLevel_17 generates Level_18.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_5 generates Level_6.\n\nLevel_5 generates Level_6.\n\nThe Fish is characterized by Fin. Scale is found in Fish.\n\nLevel_16 generates Level_17.\n\nLevel_9 generates Level_10.\n\nLevel_18 generates Level_19.\n\nLevel_16 generates Level_17.\n\nLevel_7 generates Level_8.\n\nLevel_15 generates Level_16.\n\nLevel_9 generates Level_10.\n\nRoot initiates Level_1.\n\nLevel_10 generates Level_11.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma causes Alpha. Gamma links-to Epsilon.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma opposes Delta. Gamma causes Alpha.\n\nLevel_6 generates Level_7.\n\nLevel_6 generates Level_7.\n\nLevel_11 generates Level_12.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nLevel_13 generates Level_14.\n\nLevel_19 generates Level_20.\n\nLevel_1 generates Level_2.\n\nLevel_20 fades-into Void.\n\nLevel_13 generates Level_14.\n\nLevel_12 generates Level_13.\n\nAlpha opposes Epsilon. Alpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta.\n\nLevel_17 generates Level_18.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nEpsilon is associated with Alpha. Gamma is the result of Epsilon. Epsilon is associated with Delta. Epsilon leads to Beta.\n\nLevel_17 generates Level_18.\n\nLevel_17 generates Level_18.\n\nDelta correlates with Beta. Delta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma.\n\nLevel_12 generates Level_13.\n\nDestruction leads-to Rebirth.\n\nDestruction leads-to Rebirth.\n\nLevel_11 generates Level_12.\n\nFin is a component of Fish. Scale is a component of Fish.\n\nLevel_5 generates Level_6.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nPreservation leads-to Destruction.\n\nCreation leads-to Preservation.\n\nLevel_11 generates Level_12.\n\nMusic uses Scale. Music uses Note.\n\nLevel_3 generates Level_4.\n\nLevel_18 generates Level_19.\n\nLevel_10 generates Level_11.\n\nBeta opposes Delta. Gamma is linked to Beta. Beta links-to Alpha. Beta opposes Epsilon.\n\nLevel_12 generates Level_13.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nLevel_9 generates Level_10.\n\nLevel_8 generates Level_9.\n\nMusic uses Note. Music uses Scale.\n\nEpsilon is associated with Delta. Epsilon correlates with Alpha. Epsilon triggers Gamma. Epsilon triggers Beta.\n\nLevel_20 fades-into Void.\n\nLevel_19 generates Level_20.\n\nLevel_6 generates Level_7.\n\nLevel_14 generates Level_15.\n\nLevel_15 generates Level_16.\n\nDestruction leads-to Rebirth.\n\nLevel_20 fades-into Void.\n\nLevel_10 generates Level_11.\n\nLevel_2 generates Level_3.\n\nLevel_13 generates Level_14.\n\nDelta links-to Epsilon. Beta is linked to Delta. Delta links-to Alpha. Delta links-to Gamma.\n\nLevel_15 generates Level_16.\n\nLevel_3 generates Level_4.\n\nPreservation leads-to Destruction.\n\nMusic uses Scale. Music uses Note.\n\nLevel_9 generates Level_10.\n\nRoot initiates Level_1.\n\nMap defined-by Scale. Map defined-by Legend.\n\nDelta links-to Gamma. Beta is linked to Delta. Delta links-to Alpha. Delta links-to Epsilon.\n\nMusic uses Note. Music uses Scale.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nAlpha opposes Epsilon. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta.\n\nLevel_12 generates Level_13.\n\nDestruction leads-to Rebirth.\n\nLevel_15 generates Level_16.\n\nLevel_5 generates Level_6.\n\nGamma is the result of Epsilon. Delta is linked to Epsilon. Beta is the result of Epsilon. Epsilon correlates with Alpha.\n\nMap defined-by Legend. Map defined-by Scale.\n\nPreservation leads-to Destruction.\n\nLevel_7 generates Level_8.\n\nLevel_6 generates Level_7.\n\nLevel_11 generates Level_12.\n\nCreation leads-to Preservation.\n\nMap defined-by Scale. Map defined-by Legend.\n\nBeta is linked to Delta. Delta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon.\n\nDelta links-to Alpha. Delta correlates with Beta. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_4 generates Level_5.\n\nDelta links-to Alpha. Delta links-to Epsilon. Delta links-to Gamma. Delta is associated with Beta.\n\nLevel_1 generates Level_2.\n\nLevel_16 generates Level_17.\n\nLevel_18 generates Level_19.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nGamma opposes Delta. Gamma links-to Beta. Gamma links-to Epsilon. Alpha is the result of Gamma.\n\nFish contains Fin. Scale is found in Fish.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma. Beta is linked to Delta.\n\nLevel_1 generates Level_2.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Delta. Alpha opposes Epsilon.\n\nLevel_8 generates Level_9.\n\nLevel_15 generates Level_16.\n\nRebirth leads-to Creation.\n\nLevel_10 generates Level_11.\n\nRebirth leads-to Creation.\n\nGamma links-to Beta. Gamma links-to Epsilon. Gamma opposes Delta. Gamma leads to Alpha.\n\nLevel_18 generates Level_19.\n\nLevel_13 generates Level_14.\n\nRebirth leads-to Creation.\n\nEpsilon triggers Beta. Epsilon leads to Gamma. Delta is linked to Epsilon. Epsilon is associated with Alpha.\n\nLevel_18 generates Level_19.\n\nLevel_17 generates Level_18.\n\nMap defined-by Legend. Map defined-by Scale.\n\nMusic uses Scale. Music uses Note.\n\nLevel_15 generates Level_16.\n\nLevel_1 generates Level_2.\n\nLevel_6 generates Level_7.\n\nLevel_1 generates Level_2.\n\nLevel_17 generates Level_18.\n\nLevel_1 generates Level_2.\n\nLevel_9 generates Level_10.\n\nLevel_10 generates Level_11.\n\nLevel_4 generates Level_5.\n\nLevel_10 generates Level_11.\n\nDestruction leads-to Rebirth.\n\nLevel_1 generates Level_2.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma causes Alpha. Gamma opposes Delta.\n\nLevel_20 fades-into Void.\n\nLevel_9 generates Level_10.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nRoot initiates Level_1.\n\nLevel_15 generates Level_16.\n\nLevel_17 generates Level_18.\n\nLevel_13 generates Level_14.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Epsilon. Beta opposes Delta.\n\nLevel_8 generates Level_9.\n\nMusic uses Scale. Music uses Note.\n\nLevel_3 generates Level_4.\n\nLevel_20 fades-into Void.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta.\n\nLevel_17 generates Level_18.\n\nLevel_8 generates Level_9.\n\nLevel_7 generates Level_8.\n\nLevel_6 generates Level_7.\n\nLevel_16 generates Level_17.\n\nPreservation leads-to Destruction.\n\nLevel_14 generates Level_15.\n\nLevel_17 generates Level_18.\n\nScale is found in Fish. Fish contains Fin.\n\nLevel_9 generates Level_10.\n\nLevel_2 generates Level_3.\n\nLevel_18 generates Level_19.\n\nPreservation leads-to Destruction.\n\nFish has Fin. Scale is found in Fish.\n\nLevel_17 generates Level_18.\n\nLevel_18 generates Level_19.\n\nBeta is associated with Gamma. Beta links-to Alpha. Beta opposes Delta. Beta opposes Epsilon.\n\nBeta opposes Delta. Beta is associated with Gamma. Beta opposes Epsilon. Beta links-to Alpha.\n\nLevel_18 generates Level_19.\n\nLevel_9 generates Level_10.\n\nLevel_20 fades-into Void.\n\nLevel_18 generates Level_19.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_18 generates Level_19.\n\nLevel_20 fades-into Void.\n\nLevel_11 generates Level_12.\n\nFish contains Fin. Scale is a component of Fish.\n\nLevel_20 fades-into Void.\n\nCreation leads-to Preservation.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_16 generates Level_17.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_19 generates Level_20.\n\nLevel_15 generates Level_16.\n\nMusic uses Note. Music uses Scale.\n\nLevel_6 generates Level_7.\n\nLevel_7 generates Level_8.\n\nLevel_4 generates Level_5.\n\nLevel_13 generates Level_14.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_7 generates Level_8.\n\nFin is found in Fish. Scale is a component of Fish.\n\nLevel_18 generates Level_19.\n\nVoid is Null. Void is Nothing. Void is Empty.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nLevel_12 generates Level_13.\n\nLevel_5 generates Level_6.\n\nBeta links-to Alpha. Gamma is linked to Beta. Beta opposes Delta. Beta opposes Epsilon.\n\nLevel_19 generates Level_20.\n\nMusic uses Scale. Music uses Note.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_4 generates Level_5.\n\nAlpha opposes Delta. Alpha opposes Beta. Alpha opposes Epsilon. Alpha links-to Gamma.\n\nLevel_5 generates Level_6.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nPreservation leads-to Destruction.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nLevel_13 generates Level_14.\n\nLevel_10 generates Level_11.\n\nLevel_8 generates Level_9.\n\nLevel_6 generates Level_7.\n\nLevel_20 fades-into Void.\n\nRoot initiates Level_1.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_7 generates Level_8.\n\nLevel_15 generates Level_16.\n\nRoot initiates Level_1.\n\nLevel_12 generates Level_13.\n\nLevel_9 generates Level_10.\n\nFish has Scale. The Fish is characterized by Fin.\n\nVoid is Empty. Void is Null. Void is Nothing.\n\nLevel_1 generates Level_2.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma links-to Beta. Gamma leads to Alpha.\n\nLevel_19 generates Level_20.\n\nLevel_6 generates Level_7.\n\nCreation leads-to Preservation.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma. Delta is associated with Beta.\n\nLevel_7 generates Level_8.\n\nRoot initiates Level_1.\n\nLevel_9 generates Level_10.\n\nLevel_5 generates Level_6.\n\nLevel_12 generates Level_13.\n\nLevel_13 generates Level_14.\n\nLevel_17 generates Level_18.\n\nLevel_13 generates Level_14.\n\nLevel_9 generates Level_10.\n\nPreservation leads-to Destruction.\n\nLevel_4 generates Level_5.\n\nLevel_20 fades-into Void.\n\nLevel_6 generates Level_7.\n\nLevel_1 generates Level_2.\n\nMusic uses Note. Music uses Scale.\n\nLevel_15 generates Level_16.\n\nLevel_14 generates Level_15.\n\nBeta links-to Alpha. Beta opposes Delta. Beta opposes Epsilon. Gamma is linked to Beta.\n\nLevel_4 generates Level_5.\n\nLevel_16 generates Level_17.\n\nDelta links-to Gamma. Delta links-to Alpha. Beta is linked to Delta. Delta links-to Epsilon.\n\nLevel_6 generates Level_7.\n\nLevel_20 fades-into Void.\n\nLevel_4 generates Level_5.\n\nFish contains Fin. Scale is found in Fish.\n\nLevel_18 generates Level_19.\n\nLevel_15 generates Level_16.\n\nLevel_10 generates Level_11.\n\nFish contains Scale. Fish contains Fin.\n\nLevel_4 generates Level_5.\n\nRebirth leads-to Creation.\n\nLevel_5 generates Level_6.\n\nLevel_8 generates Level_9.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_6 generates Level_7.\n\nLevel_7 generates Level_8.\n\nLevel_12 generates Level_13.\n\nCreation leads-to Preservation.\n\nMusic uses Scale. Music uses Note.\n\nRoot initiates Level_1.\n\nDestruction leads-to Rebirth.\n\nRebirth leads-to Creation.\n\nLevel_19 generates Level_20.\n\nLevel_2 generates Level_3.\n\nAlpha opposes Beta. Alpha opposes Delta. Alpha links-to Gamma. Alpha opposes Epsilon.\n\nLevel_7 generates Level_8.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta.\n\nLevel_5 generates Level_6.\n\nRoot initiates Level_1.\n\nLevel_14 generates Level_15.\n\nCreation leads-to Preservation.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha. Gamma is linked to Beta.\n\nLevel_16 generates Level_17.\n\nLevel_20 fades-into Void.\n\nPreservation leads-to Destruction.\n\nFish has Fin. The Fish is characterized by Scale.\n\nLevel_2 generates Level_3.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Gamma. Delta links-to Epsilon.\n\nLevel_12 generates Level_13.\n\nMusic uses Note. Music uses Scale.\n\nVoid is Empty. Void is Nothing. Void is Null.\n\nCreation leads-to Preservation.\n\nLevel_14 generates Level_15.\n\nDelta links-to Gamma. Beta is linked to Delta. Delta links-to Alpha. Delta links-to Epsilon.\n\nDestruction leads-to Rebirth.\n\nLevel_7 generates Level_8.\n\nLevel_18 generates Level_19.\n\nLevel_19 generates Level_20.\n\nLevel_10 generates Level_11.\n\nAlpha opposes Delta. Alpha links-to Gamma. Alpha opposes Beta. Alpha opposes Epsilon.\n\nPreservation leads-to Destruction.\n\nVoid is Null. Void is Empty. Void is Nothing.\n\nLevel_2 generates Level_3.\n\nLevel_17 generates Level_18.\n\nLevel_17 generates Level_18.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta.\n\nLevel_5 generates Level_6.\n\nLevel_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nLevel_12 generates Level_13.\n\nLevel_17 generates Level_18.\n\nGamma links-to Beta. Gamma links-to Epsilon. Alpha is the result of Gamma. Gamma opposes Delta.\n\nGamma is linked to Beta. Beta links-to Alpha. Beta opposes Epsilon. Beta opposes Delta.\n\nLevel_13 generates Level_14.\n\nBeta opposes Epsilon. Beta correlates with Gamma. Beta links-to Alpha. Beta opposes Delta.\n\nLevel_9 generates Level_10.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nLevel_16 generates Level_17.\n\nPreservation leads-to Destruction.\n\nLevel_9 generates Level_10.\n\nLevel_18 generates Level_19.\n\nLevel_19 generates Level_20.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma causes Alpha. Gamma links-to Beta.\n\nRebirth leads-to Creation.\n\nLevel_4 generates Level_5.\n\nLevel_4 generates Level_5.\n\nLevel_11 generates Level_12.\n\nLevel_20 fades-into Void.\n\nGamma opposes Delta. Alpha is the result of Gamma. Gamma links-to Epsilon. Gamma links-to Beta.\n\nLevel_9 generates Level_10.\n\nLevel_12 generates Level_13.\n\nFish has Scale. Fish contains Fin.\n\nLevel_6 generates Level_7.\n\nFin is found in Fish. The Fish is characterized by Scale.\n\nLevel_20 fades-into Void.\n\nGamma links-to Epsilon. Gamma links-to Beta. Gamma leads to Alpha. Gamma opposes Delta.\n\nLevel_10 generates Level_11.\n\nLevel_11 generates Level_12.\n\nLevel_1 generates Level_2.\n\nDelta links-to Epsilon. Beta is linked to Delta. Delta links-to Gamma. Delta links-to Alpha.\n\nVoid is Nothing. Void is Null. Void is Empty.\n\nLevel_5 generates Level_6.\n\nLevel_6 generates Level_7.\n\nLevel_6 generates Level_7.\n\nLevel_3 generates Level_4.\n\nLevel_17 generates Level_18.\n\nAlpha opposes Beta. Alpha links-to Gamma. Alpha opposes Epsilon. Alpha opposes Delta.\n\nLevel_20 fades-into Void.\n\nMap defined-by Scale. Map defined-by Legend.\n\nLevel_3 generates Level_4.\n\nAlpha opposes Beta. Alpha opposes Epsilon. Alpha links-to Gamma. Alpha opposes Delta.\n\nLevel_5 generates Level_6.\n\nLevel_18 generates Level_19.\n\nLevel_8 generates Level_9.\n\nLevel_5 generates Level_6.\n\nLevel_7 generates Level_8.\n\nLevel_5 generates Level_6.\n\nLevel_10 generates Level_11.\n\nRoot initiates Level_1.\n\nLevel_6 generates Level_7.\n\nLevel_17 generates Level_18.\n\nLevel_9 generates Level_10.\n\nLevel_18 generates Level_19.\n\nLevel_19 generates Level_20.\n\nMusic uses Scale. Music uses Note.\n\nLevel_13 generates Level_14.\n\nLevel_20 fades-into Void.\n\nLevel_11 generates Level_12.\n\nPreservation leads-to Destruction.\n\nBeta opposes Epsilon. Beta correlates with Gamma. Beta links-to Alpha. Beta opposes Delta.\n\nGamma links-to Epsilon. Gamma opposes Delta. Gamma links-to Beta. Gamma causes Alpha.\n\nScale is found in Fish. Fish contains Fin.\n\nLevel_13 generates Level_14.\n\nBeta opposes Epsilon. Gamma is linked to Beta. Beta links-to Alpha. Beta opposes Delta.\n\nRoot initiates Level_1.\n\nLevel_13 generates Level_14.\n\nGamma opposes Delta. Gamma links-to Epsilon. Gamma triggers Alpha. Gamma links-to Beta.\n\nMap defined-by Legend. Map defined-by Scale.\n\nLevel_16 generates Level_17.\n\nMusic uses Note. Music uses Scale.\n\nRoot initiates Level_1.\n\nLevel_1 generates Level_2.\n\nLevel_16 generates Level_17.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nLevel_8 generates Level_9.\n\nDestruction leads-to Rebirth.\n\nLevel_4 generates Level_5.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta links-to Epsilon. Delta is associated with Beta.\n\nMusic uses Scale. Music uses Note.\n\nCreation leads-to Preservation.\n\nLevel_3 generates Level_4.\n\nLevel_4 generates Level_5.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nDelta links-to Gamma. Delta links-to Alpha. Delta correlates with Beta. Delta links-to Epsilon.\n\nLevel_3 generates Level_4.\n\nPreservation leads-to Destruction.\n\nScale is a component of Fish. Fin is a component of Fish.\n\nLevel_12 generates Level_13.\n\nScale is found in Fish. Fin is a component of Fish.\n\nLevel_13 generates Level_14.\n\nLevel_7 generates Level_8.\n\nRebirth leads-to Creation.\n\nLevel_11 generates Level_12.\n\nRebirth leads-to Creation.\n\nLevel_6 generates Level_7.\n\nLevel_13 generates Level_14.\n\nLevel_6 generates Level_7.\n\nLevel_20 fades-into Void.\n\nLevel_15 generates Level_16.\n\nLevel_18 generates Level_19.\n\nFin is found in Fish. Scale is found in Fish.\n\nMusic uses Note. Music uses Scale.\n\nLevel_11 generates Level_12.\n\nLevel_15 generates Level_16.\n\nLevel_3 generates Level_4.\n\nLevel_17 generates Level_18.\n\nLevel_6 generates Level_7.\n\nLevel_10 generates Level_11.\n\nLevel_17 generates Level_18.\n\nLevel_12 generates Level_13.\n\nDelta links-to Epsilon. Delta links-to Alpha. Delta links-to Gamma. Delta is associated with Beta.\n\nMap defined-by Legend. Map defined-by Scale.\n\nMap defined-by Scale. Map defined-by Legend.\n\nFin is a component of Fish. Scale is found in Fish.\n\nPreservation leads-to Destruction.\n\nScale is a component of Fish. Fin is found in Fish.\n\nEpsilon correlates with Alpha. Epsilon is associated with Delta. Epsilon triggers Beta. Epsilon causes Gamma.\n\nLevel_19 generates Level_20.\n\nLevel_2 generates Level_3.\n\nLevel_4 generates Level_5.\n\nLevel_8 generates Level_9.\n\nBeta opposes Epsilon. Beta opposes Delta. Beta correlates with Gamma. Beta links-to Alpha.\n\nEpsilon leads to Gamma. Delta is linked to Epsilon. Beta is the result of Epsilon. Epsilon is associated with Alpha.\n\nMusic uses Note. Music uses Scale.\n\nDelta links-to Alpha. Delta correlates with Beta. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_17 generates Level_18.\n\nLevel_16 generates Level_17.\n\nLevel_18 generates Level_19.\n\nDelta links-to Alpha. Delta is associated with Beta. Delta links-to Epsilon. Delta links-to Gamma.\n\nLevel_7 generates Level_8.\n\nDestruction leads-to Rebirth.\n\nRoot initiates Level_1.\n\nLevel_14 generates Level_15.\n\nLevel_19 generates Level_20.\n\nBeta is associated with Gamma. Beta opposes Epsilon. Beta opposes Delta. Beta links-to Alpha.\n\nLevel_18 generates Level_19.\n\nLevel_14 generates Level_15.\n\nLevel_5 generates Level_6.\n\nLevel_12 generates Level_13.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nRebirth leads-to Creation.\n\nLevel_15 generates Level_16.\n\nLevel_5 generates Level_6.\n\nLevel_4 generates Level_5.\n\nDestruction leads-to Rebirth.\n\nDelta links-to Gamma. Beta is linked to Delta. Delta links-to Epsilon. Delta links-to Alpha.\n\nLevel_3 generates Level_4.\n\nLevel_3 generates Level_4.\n\nLevel_13 generates Level_14.\n\nLevel_2 generates Level_3.\n\nRoot initiates Level_1.\n\nLevel_2 generates Level_3.\n\nLevel_3 generates Level_4.\n\nVoid is Nothing. Void is Empty. Void is Null.\n\nLevel_10 generates Level_11.\n\nLevel_5 generates Level_6.\n\nAlpha is linked to Epsilon. Epsilon triggers Gamma. Beta is the result of Epsilon. Delta is linked to Epsilon.\n\nLevel_15 generates Level_16.\n\nLevel_20 fades-into Void.\n\nRebirth leads-to Creation.\n\nLevel_14 generates Level_15.\n\nRebirth leads-to Creation.\n\nEpsilon leads to Gamma. Delta is linked to Epsilon. Beta is the result of Epsilon. Alpha is linked to Epsilon.\n\n",
+  "inferred_lattice": {
+    "level_5--level_6": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "127": {
+        "r": 1,
+        "i": 0
+      },
+      "131": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_5": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "127": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_6": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "131": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_10--level_11": {
+      "47": {
+        "r": 26,
+        "i": 0
+      },
+      "139": {
+        "r": 1,
+        "i": 0
+      },
+      "149": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_10": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "139": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_11": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "149": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "legend--map": {
+      "53": {
+        "r": 35,
+        "i": 0
+      },
+      "151": {
+        "r": 1,
+        "i": 0
+      },
+      "157": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "define by--map": {
+      "53": {
+        "r": 35,
+        "i": 0
+      },
+      "157": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "define by--legend": {
+      "53": {
+        "r": 35,
+        "i": 0
+      },
+      "151": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "map--scale": {
+      "53": {
+        "r": 24,
+        "i": 0
+      },
+      "157": {
+        "r": 1,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "define by--scale": {
+      "53": {
+        "r": 24,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_11--level_12": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "149": {
+        "r": 1,
+        "i": 0
+      },
+      "167": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_12": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "167": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "creation--rebirth": {
+      "59": {
+        "r": 26,
+        "i": 0
+      },
+      "173": {
+        "r": 1,
+        "i": 0
+      },
+      "179": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "lead to_2--rebirth": {
+      "59": {
+        "r": 24,
+        "i": 0
+      },
+      "181": {
+        "r": 1,
+        "i": 0
+      },
+      "179": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "creation--lead to_2": {
+      "59": {
+        "r": 24,
+        "i": 0
+      },
+      "173": {
+        "r": 1,
+        "i": 0
+      },
+      "181": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_1--level_2": {
+      "47": {
+        "r": 26,
+        "i": 0
+      },
+      "191": {
+        "r": 1,
+        "i": 0
+      },
+      "193": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_1": {
+      "47": {
+        "r": 1,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "191": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_2": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "193": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "destruction--preservation": {
+      "59": {
+        "r": 26,
+        "i": 0
+      },
+      "197": {
+        "r": 1,
+        "i": 0
+      },
+      "199": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "lead to_2--preservation": {
+      "59": {
+        "r": 24,
+        "i": 0
+      },
+      "181": {
+        "r": 1,
+        "i": 0
+      },
+      "199": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "destruction--lead to_2": {
+      "59": {
+        "r": 24,
+        "i": 0
+      },
+      "197": {
+        "r": 1,
+        "i": 0
+      },
+      "181": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_19--level_20": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "211": {
+        "r": 1,
+        "i": 0
+      },
+      "223": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_19": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "211": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_20": {
+      "47": {
+        "r": 1,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "223": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--epsilon": {
+      "61": {
+        "r": 1,
+        "i": 0
+      },
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "103": {
+        "r": 1,
+        "i": 0
+      },
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "correlate with--epsilon": {
+      "61": {
+        "r": 13,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--correlate with": {
+      "61": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "delta--epsilon": {
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "103": {
+        "r": 1,
+        "i": 0
+      },
+      "61": {
+        "r": 1,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "delta--link to": {
+      "67": {
+        "r": 16,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "epsilon--link to": {
+      "67": {
+        "r": 11,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "epsilon--gamma": {
+      "71": {
+        "r": 0,
+        "i": 1
+      },
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "101": {
+        "r": 0,
+        "i": 1
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "epsilon--trigger": {
+      "71": {
+        "r": 0,
+        "i": 17
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "gamma--trigger": {
+      "71": {
+        "r": 0,
+        "i": 19
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--result of epsilon": {
+      "73": {
+        "r": 14,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "257": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_1--beta": {
+      "73": {
+        "r": 1,
+        "i": 0
+      },
+      "263": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_1--result of epsilon": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "263": {
+        "r": 1,
+        "i": 0
+      },
+      "257": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--delta": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "103": {
+        "r": 1,
+        "i": 0
+      },
+      "61": {
+        "r": 1,
+        "i": 0
+      },
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--oppose": {
+      "79": {
+        "r": 14,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "delta--oppose": {
+      "79": {
+        "r": 11,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--epsilon": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "101": {
+        "r": 0,
+        "i": 1
+      },
+      "71": {
+        "r": 0,
+        "i": 1
+      },
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "epsilon--oppose": {
+      "79": {
+        "r": 10,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--gamma": {
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "61": {
+        "r": 1,
+        "i": 0
+      },
+      "103": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "gamma--link to": {
+      "67": {
+        "r": 13,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--link to": {
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--link": {
+      "19": {
+        "r": 20,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "269": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "has-property--link": {
+      "19": {
+        "r": 42,
+        "i": 0
+      },
+      "269": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--has-property": {
+      "19": {
+        "r": 20,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_13--level_14": {
+      "47": {
+        "r": 33,
+        "i": 0
+      },
+      "271": {
+        "r": 1,
+        "i": 0
+      },
+      "277": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_13": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "271": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_14": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "277": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_18--level_19": {
+      "47": {
+        "r": 24,
+        "i": 0
+      },
+      "281": {
+        "r": 1,
+        "i": 0
+      },
+      "211": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_18": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "281": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_10--level_9": {
+      "47": {
+        "r": 26,
+        "i": 0
+      },
+      "139": {
+        "r": 1,
+        "i": 0
+      },
+      "283": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_9": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "283": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--delta": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--oppose": {
+      "79": {
+        "r": 14,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--beta": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--correlate with": {
+      "61": {
+        "r": 14,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "correlate with--gamma": {
+      "61": {
+        "r": 10,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fin--fish": {
+      "83": {
+        "r": 22,
+        "i": 0
+      },
+      "97": {
+        "r": 24,
+        "i": 0
+      },
+      "89": {
+        "r": 23,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      },
+      "307": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fish--have": {
+      "83": {
+        "r": 36,
+        "i": 0
+      },
+      "307": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fin--have": {
+      "83": {
+        "r": 35,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_16--level_17": {
+      "47": {
+        "r": 26,
+        "i": 0
+      },
+      "311": {
+        "r": 1,
+        "i": 0
+      },
+      "313": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_16": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "311": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_17": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "313": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_2--level_3": {
+      "47": {
+        "r": 27,
+        "i": 0
+      },
+      "193": {
+        "r": 1,
+        "i": 0
+      },
+      "317": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_3": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "317": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fish--scale": {
+      "89": {
+        "r": 14,
+        "i": 0
+      },
+      "97": {
+        "r": 11,
+        "i": 0
+      },
+      "83": {
+        "r": 7,
+        "i": 0
+      },
+      "307": {
+        "r": 1,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "find in--scale": {
+      "89": {
+        "r": 23,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "find in--fish": {
+      "89": {
+        "r": 36,
+        "i": 0
+      },
+      "307": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "destruction--rebirth": {
+      "59": {
+        "r": 26,
+        "i": 0
+      },
+      "197": {
+        "r": 1,
+        "i": 0
+      },
+      "179": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "contain--fish": {
+      "97": {
+        "r": 36,
+        "i": 0
+      },
+      "307": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "contain--fin": {
+      "97": {
+        "r": 35,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_4--level_5": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "331": {
+        "r": 1,
+        "i": 0
+      },
+      "127": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_4": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "331": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "nothing--void": {
+      "73": {
+        "r": 24,
+        "i": 0
+      },
+      "337": {
+        "r": 1,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_3--void": {
+      "73": {
+        "r": 22,
+        "i": 0
+      },
+      "349": {
+        "r": 1,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_3--nothing": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "349": {
+        "r": 1,
+        "i": 0
+      },
+      "337": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "empty--void": {
+      "73": {
+        "r": 24,
+        "i": 0
+      },
+      "353": {
+        "r": 1,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_3--empty": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "349": {
+        "r": 1,
+        "i": 0
+      },
+      "353": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "null--void": {
+      "73": {
+        "r": 24,
+        "i": 0
+      },
+      "359": {
+        "r": 1,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_3--null": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "349": {
+        "r": 1,
+        "i": 0
+      },
+      "359": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "gamma--result of epsilon": {
+      "73": {
+        "r": 16,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      },
+      "257": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_1--gamma": {
+      "73": {
+        "r": 1,
+        "i": 0
+      },
+      "263": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "cause--epsilon": {
+      "101": {
+        "r": 0,
+        "i": 16
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--cause": {
+      "101": {
+        "r": 0,
+        "i": 9
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "associate with--epsilon": {
+      "103": {
+        "r": 13,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--associate with": {
+      "103": {
+        "r": 9,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "music--scale": {
+      "107": {
+        "r": 23,
+        "i": 0
+      },
+      "367": {
+        "r": 1,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "music--use": {
+      "107": {
+        "r": 34,
+        "i": 0
+      },
+      "367": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "scale--use": {
+      "107": {
+        "r": 23,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "music--note": {
+      "107": {
+        "r": 34,
+        "i": 0
+      },
+      "367": {
+        "r": 1,
+        "i": 0
+      },
+      "373": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "note--use": {
+      "107": {
+        "r": 34,
+        "i": 0
+      },
+      "373": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "creation--preservation": {
+      "59": {
+        "r": 26,
+        "i": 0
+      },
+      "173": {
+        "r": 1,
+        "i": 0
+      },
+      "199": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--gamma": {
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "101": {
+        "r": 0,
+        "i": 1
+      },
+      "71": {
+        "r": 0,
+        "i": 1
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "gamma--lead to_1": {
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      },
+      "379": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--lead to_1": {
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "379": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "delta--gamma": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "67": {
+        "r": 1,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "gamma--oppose": {
+      "79": {
+        "r": 1,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_3--level_4": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "317": {
+        "r": 1,
+        "i": 0
+      },
+      "331": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--link to": {
+      "67": {
+        "r": 10,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "epsilon--lead to_1": {
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "233": {
+        "r": 1,
+        "i": 0
+      },
+      "379": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "associate with--delta": {
+      "103": {
+        "r": 11,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_12--level_13": {
+      "47": {
+        "r": 27,
+        "i": 0
+      },
+      "167": {
+        "r": 1,
+        "i": 0
+      },
+      "271": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "cause--gamma": {
+      "101": {
+        "r": 0,
+        "i": 20
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--cause": {
+      "101": {
+        "r": 0,
+        "i": 12
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_8--level_9": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "383": {
+        "r": 1,
+        "i": 0
+      },
+      "283": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_8": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "383": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "associate with--beta": {
+      "103": {
+        "r": 14,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "correlate with--delta": {
+      "61": {
+        "r": 12,
+        "i": 0
+      },
+      "239": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_7--level_8": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "389": {
+        "r": 1,
+        "i": 0
+      },
+      "383": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_1--level_7": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "137": {
+        "r": 1,
+        "i": 0
+      },
+      "389": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_15--level_16": {
+      "47": {
+        "r": 33,
+        "i": 0
+      },
+      "397": {
+        "r": 1,
+        "i": 0
+      },
+      "311": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "generate_2--level_15": {
+      "47": {
+        "r": 11,
+        "i": 0
+      },
+      "227": {
+        "r": 1,
+        "i": 0
+      },
+      "397": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_6--level_7": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "131": {
+        "r": 1,
+        "i": 0
+      },
+      "389": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "contain--scale": {
+      "97": {
+        "r": 21,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_20--void": {
+      "109": {
+        "r": 17,
+        "i": 0
+      },
+      "223": {
+        "r": 1,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fade into--level_20": {
+      "109": {
+        "r": 31,
+        "i": 0
+      },
+      "223": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fade into--void": {
+      "109": {
+        "r": 24,
+        "i": 0
+      },
+      "347": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_1--root": {
+      "113": {
+        "r": 35,
+        "i": 0
+      },
+      "191": {
+        "r": 1,
+        "i": 0
+      },
+      "401": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "initiate--root": {
+      "113": {
+        "r": 41,
+        "i": 0
+      },
+      "401": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "initiate--level_1": {
+      "113": {
+        "r": 35,
+        "i": 0
+      },
+      "191": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "component of fish--scale": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "409": {
+        "r": 1,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_2--scale": {
+      "73": {
+        "r": 1,
+        "i": 0
+      },
+      "419": {
+        "r": 1,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_2--component of fish": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "419": {
+        "r": 1,
+        "i": 0
+      },
+      "409": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "level_17--level_18": {
+      "47": {
+        "r": 25,
+        "i": 0
+      },
+      "313": {
+        "r": 1,
+        "i": 0
+      },
+      "281": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--trigger": {
+      "71": {
+        "r": 0,
+        "i": 11
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--result of gamma": {
+      "73": {
+        "r": 22,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "421": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--be_1": {
+      "73": {
+        "r": 1,
+        "i": 0
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      },
+      "263": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_1--result of gamma": {
+      "73": {
+        "r": 25,
+        "i": 0
+      },
+      "263": {
+        "r": 1,
+        "i": 0
+      },
+      "421": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "beta--lead to_1": {
+      "59": {
+        "r": 1,
+        "i": 0
+      },
+      "251": {
+        "r": 1,
+        "i": 0
+      },
+      "379": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "alpha--trigger": {
+      "71": {
+        "r": 0,
+        "i": 11
+      },
+      "229": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "fin--find in": {
+      "89": {
+        "r": 33,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "have--scale": {
+      "83": {
+        "r": 21,
+        "i": 0
+      },
+      "163": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "associate with--gamma": {
+      "103": {
+        "r": 9,
+        "i": 0
+      },
+      "241": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "component of fish--fin": {
+      "73": {
+        "r": 31,
+        "i": 0
+      },
+      "409": {
+        "r": 1,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      }
+    },
+    "be_2--fin": {
+      "73": {
+        "r": 7,
+        "i": 0
+      },
+      "419": {
+        "r": 1,
+        "i": 0
+      },
+      "293": {
+        "r": 1,
+        "i": 0
+      }
+    }
+  }
+}

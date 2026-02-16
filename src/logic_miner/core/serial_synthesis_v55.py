@@ -1,22 +1,15 @@
 from .serial_synthesis_v54 import SerialSynthesizerV54
-from .discovery import PrimeSelector
-from .lifter import HenselLifter
-from .adelic import AdelicIntegrator
-from .real import RealSolver
+from .algebraic_text import AlgebraicTextSolver
+from .mahler import MahlerSolver
 from collections import defaultdict, Counter
 import math
+import numpy as np
 
 class SerialSynthesizerV55(SerialSynthesizerV54):
     """
-    Protocol V.55: Sheaf Splining.
-    Implements rigid overlap verification (Sheaf Property) for text windows.
-    
-    Key Corrections from External Agent:
-    - BANNED: Spline Momentum (continuous averaging)
-    - PERMITTED: Sheaf Splining (rigid lock verification)
-    
-    Sheaf Property: If two p-adic functions agree on overlap → LOCK into global law.
-    If they disagree even slightly → REJECT (no averaging).
+    Protocol V.56-Standard: Mahler-Locked Sheaf Integration.
+    Implements rigid verification over logical polynomials (Mahler Coefficients).
+    Transitions windows into a global ontology via identity locking.
     """
     def __init__(self, chunk_size=50, momentum=0.0):
         super().__init__(chunk_size=chunk_size, momentum=momentum)
@@ -25,6 +18,20 @@ class SerialSynthesizerV55(SerialSynthesizerV54):
         self.window_overlaps = []  # (win_A_id, win_B_id, overlap_pages)
         self.locked_terms = set()  # Terms that passed sheaf lock
         self.rejected_links = []  # (term, reason)
+        self.global_valuations = defaultdict(list) # term -> [vals]
+        self.global_counts = Counter()
+        
+        self.STOPWORDS_SEMANTIC = {
+            "Figure", "Table", "Example", "Exercise", "Problem", "Solution", 
+            "Chapter", "Section", "Two", "Number", "Given", "Find", "Using", 
+            "Calculate", "Determine", "Assume", "Suppose", "Consider", "Note",
+            "Values", "Recall", "Review", "Answers", "Questions", "Summary",
+            "Key Terms", "Objectives", "Introduction", "Chemistry", "Science",
+            "you", "your", "than", "this", "that", "these", "those", "with",
+            "from", "will", "and", "the", "for", "are", "but", "have", "can",
+            "which", "also", "all", "its", "their", "when", "into", "between"
+        }
+        self.final_valuations = {}
         
     def fit_stream(self, text=None, reader=None, max_pages=1200):
         """
@@ -35,6 +42,10 @@ class SerialSynthesizerV55(SerialSynthesizerV54):
             # For text input, fall back to V.54 logic
             return super().fit_stream(text=text, reader=None, max_pages=max_pages)
         
+        if max_pages is None:
+            max_pages = len(reader.pages)
+            
+        self.reader = reader # Store for sheaf verification
         print("--- [Serial Sheaf Synthesis V.55] ---")
         window_size = 50
         step_size = 25  # 50% overlap
@@ -77,138 +88,213 @@ class SerialSynthesizerV55(SerialSynthesizerV54):
         
         self._consolidate_sheaf_lattice()
         
-        return {}  # Dummy return for compatibility
+        return {
+            'coordinates': self.final_vectors,
+            'tree': self.tree_structure,
+            'locked_terms': list(self.locked_terms),
+            'valuations': self.final_valuations
+        }
 
     def _process_window(self, window_text, window_id):
         """
-        Process a text window using V.54 logic, return discovered terms.
+        [Protocol V.56] Processes a text window into a Field of Potentials.
+        Returns discovered logic (coordinates and Mahler polynomial).
         """
-        candidates = self.featurizer.extract_entities(window_text, limit=500)
-        if not candidates:
+        # 1. Atomize (Bag of Atoms)
+        atom_counts = self.featurizer.extract_entities(window_text, limit=400)
+        entities = list(atom_counts.keys())
+        
+        if len(entities) < 5:
             return {}
-        
-        matrix_raw, counts, _ = self.featurizer.build_association_matrix(window_text, candidates)
-        hilbert_map = self.hilbert_mapper.compute_mappings(matrix_raw, candidates)
-        
-        # Filter valid terms
-        valid_terms = [c for c in candidates if hilbert_map.get(c, 0) > 0]
-        if len(valid_terms) < 5:
-            return {}
-        
-        # RANSAC Discovery
-        inputs = [hilbert_map[term] for term in valid_terms]
-        outputs = [counts.get(term.replace(" ", "_"), 0) for term in valid_terms]
-        
-        try:
-            best_p, score, _ = self.prime_selector.select_detailed(inputs, outputs)
             
-            if score > 0.3:
-                # Hensel Lifting with Ghost Detection
-                from .solver import ModularSolver
-                solver = ModularSolver(best_p)
-                data_mod_p = [(x, y % best_p) for x, y in zip(inputs, outputs)]
-                layers = solver.ransac_iterative(data_mod_p, min_ratio=0.3, min_size=3)
-                
-                window_terms = {}
-                for layer in layers[:3]:
-                    lifter = HenselLifter(best_p)
-                    inlier_inputs = [d[0] for d in layer['inliers']]
-                    inlier_outputs = [d[1] for d in layer['inliers']]
-                    
-                    lift_res = lifter.lift(inlier_inputs, inlier_outputs, max_depth=10, min_consensus=0.4)
-                    
-                    if lift_res['status'] == 'CONVERGED':
-                        # Store lifted coordinates
-                        for d in layer['inliers']:
-                            h_coord = d[0]
-                            for term in valid_terms:
-                                if hilbert_map[term] == h_coord:
-                                    if term not in window_terms:
-                                        window_terms[term] = {}
-                                    window_terms[term][best_p] = h_coord
-                                    break
-                
-                return window_terms
-        except Exception as e:
-            print(f"     ! Window {window_id} Error: {e}")
+        # 2. Field Generation (Valuation Map + Interaction Tensor)
+        valuations = self.featurizer.compute_valuation_map(atom_counts)
+        implication_matrix = self.featurizer.compute_interaction_tensor(window_text, entities)
         
+        # 3. Solver: Field -> Hensel Lift -> Coordinates
+        solver = AlgebraicTextSolver(p=self.p)
+        try:
+            local_manifold = solver.solve(valuations, implication_matrix, atom_counts)
+            
+            if local_manifold['analytic_score'] > 0.4:
+                return {
+                    'coordinates': local_manifold['coordinates'],
+                    'depths': local_manifold['depths'],
+                    'atom_counts': atom_counts,
+                    'valuations': valuations,
+                    'implication_matrix': implication_matrix,
+                    'entities': entities,
+                    'polynomial': local_manifold['polynomial'],
+                    'analytic_score': local_manifold['analytic_score'],
+                    'p': local_manifold['p']
+                }
+        except Exception as e:
+            print(f"     ! Window {window_id} Solver Error: {e}")
+            
         return {}
 
     def _sheaf_lock_check(self, win_A_id, win_B_id, overlap_pages):
         """
-        Sheaf Property: Check if logic from two windows LOCKS on overlap.
-        If coords agree exactly → LOCK (merge)
-        If coords disagree → REJECT (no averaging)
+        [Protocol V.56.6] Intersection Sheaf Logic.
+        Rigid verification through subtractive field intersection.
         """
         logic_A = self.window_logic.get(win_A_id, {})
         logic_B = self.window_logic.get(win_B_id, {})
         
         if not logic_A or not logic_B:
             return
-        
-        # Find common terms (overlap)
-        common_terms = set(logic_A.keys()) & set(logic_B.keys())
-        
-        if len(common_terms) < 3:
-            print(f"     ! Windows {win_A_id}-{win_B_id}: Insufficient overlap ({len(common_terms)} terms)")
+            
+        common_terms = list(set(logic_A['entities']) & set(logic_B['entities']))
+        if len(common_terms) < 5:
             return
+            
+        # 1. Compute Intersection Field: min(P_A, P_B)
+        mA = logic_A['implication_matrix']
+        mB = logic_B['implication_matrix']
         
-        # Check RIGID LOCK: coords must match EXACTLY
-        locked = 0
-        rejected = 0
+        intersection_matrix = defaultdict(dict)
+        for t1 in common_terms:
+            for t2 in common_terms:
+                pA = mA.get(t1, {}).get(t2, 0.0)
+                pB = mB.get(t1, {}).get(t2, 0.0)
+                p_int = min(pA, pB)
+                if p_int > 0.1:
+                    intersection_matrix[t1][t2] = p_int
+                
+        # 2. Valuation Supremum: max(vA, vB)
+        vA = logic_A['valuations']
+        vB = logic_B['valuations']
+        intersection_valuations = {t: max(vA[t], vB[t]) for t in common_terms}
         
-        for term in common_terms:
-            coords_A = logic_A[term]
-            coords_B = logic_B[term]
+        # 3. Analytic Intersection Test: Solve the residual structure
+        solver = AlgebraicTextSolver(p=self.p)
+        try:
+            # We need counts for Mahler regression. min counts?
+            cA = logic_A['atom_counts']
+            cB = logic_B['atom_counts']
+            intersection_counts = {t: min(cA[t], cB[t]) for t in common_terms}
             
-            # Check all primes
-            common_primes = set(coords_A.keys()) & set(coords_B.keys())
-            if not common_primes:
-                rejected += 1
-                self.rejected_links.append((term, f"No common primes between win{win_A_id}-{win_B_id}"))
-                continue
+            res = solver.solve(intersection_valuations, intersection_matrix, intersection_counts)
             
-            # EXACT match required (no tolerance)
-            matches = all(coords_A[p] == coords_B[p] for p in common_primes)
-            
-            if matches:
-                locked += 1
-                self.locked_terms.add(term)
-                # Merge coordinates
-                for p in coords_A.keys():
-                    self.adelic_coords[term][p].append(coords_A[p])
-                for p in coords_B.keys():
-                    if p not in coords_A:
-                        self.adelic_coords[term][p].append(coords_B[p])
+            # If the intersection is structurally sound (Energy -> 0)
+            if res['analytic_score'] > 0.5:
+                # RIGID LOCK
+                for t in common_terms:
+                    self.locked_terms.add(t)
+                    p = logic_A['p']
+                    self.adelic_coords[t][p].append(logic_A['coordinates'].get(t, 0))
+                    self.adelic_coords[t][p].append(logic_B['coordinates'].get(t, 0))
+                
+                print(f"     > Windows {win_A_id}-{win_B_id}: RIGID LOCK ACQUIRED (Intersection Score: {res['analytic_score']:.2f})")
             else:
-                rejected += 1
-                self.rejected_links.append((term, f"Coord mismatch between win{win_A_id}-{win_B_id}"))
+                print(f"     ! Windows {win_A_id}-{win_B_id}: REJECTED (Intersection Energy too high: {1 - res['analytic_score']:.2f})")
+                self.rejected_links.append((win_A_id, win_B_id))
+                
+        except Exception as e:
+            print(f"     ! Windows {win_A_id}-{win_B_id}: Intersection Test Error: {e}")
+
+    def _compute_restricted_relative_poly(self, window_logic, common_terms, local_counts):
+        """
+        Helper: Computes a Mahler polynomial for a subset of terms with relative depth normalization.
+        """
+        depths = window_logic.get('depths', {})
+        p = window_logic.get('p', self.p)
         
-        print(f"     > Windows {win_A_id}-{win_B_id}: {locked} locked, {rejected} rejected (Sheaf Property)")
+        # Filter intersection data
+        subset_depths = {t: depths[t] for t in common_terms if t in depths}
+        if not subset_depths: return None
+        
+        # Re-index: Relative Depth = Absolute Depth - Local Root Depth
+        min_d = min(subset_depths.values())
+        layers = defaultdict(list)
+        for term, abs_d in subset_depths.items():
+            rel_d = abs_d - min_d
+            # Use local_counts for pure overlap identity
+            layers[rel_d].append(math.log(local_counts.get(term, 0) + 1))
+            
+        depth_keys = sorted(layers.keys())
+        xs = depth_keys
+        ys = [sum(layers[d]) / len(layers[d]) for d in depth_keys]
+        
+        if len(xs) < 2: return None 
+        
+        from .mahler import MahlerSolver
+        ms = MahlerSolver(p)
+        coeffs = ms.compute_coefficients(xs, ys)
+        # Round for identity match stability
+        return [round(float(c), 3) for c in coeffs]
 
     def _consolidate_sheaf_lattice(self):
         """
-        Consolidate only terms that passed sheaf lock.
-        Use trajectory mode (discrete majority) for stability.
+        [Protocol V.56.8] Dense Global Consolidation.
+        Unions all verified window fields to build a connected ontology.
         """
-        # Only keep locked terms
-        self.final_vectors = {}
-        for term in self.locked_terms:
-            if term in self.STOPWORDS_SEMANTIC:
-                continue
-            
-            vec = {}
-            for p, coords in self.adelic_coords[term].items():
-                if coords:
-                    # DISCRETE MAJORITY VOTING (not averaging)
-                    from collections import Counter
-                    mode_coord = Counter(coords).most_common(1)[0][0]
-                    vec[p] = mode_coord
-            
-            if vec:
-                self.final_vectors[term] = vec
+        if not self.locked_terms:
+            self.final_vectors = {}
+            self.tree_structure = {'tree': {}, 'roots': []}
+            return
+
+        print(f"       - Consolidating Global Sheaf for {len(self.locked_terms)} locked terms...")
         
-        print(f"       - Final Yield (Sheaf-Verified): {len(self.final_vectors)} terms")
+        # 1. Aggregate Global Field (Union of Window Knowlege)
+        global_field = defaultdict(dict)
+        global_vals = defaultdict(list)
+        global_counts = Counter()
         
-        # Build tree using V.54's p-adic logic
-        self.tree_structure = self._build_padic_tree(list(self.final_vectors.keys()))
+        for win_id, logic in self.window_logic.items():
+            if not logic: continue
+            
+            # Use all terms in the window that were eventually locked and NOT stopwords
+            valid_window_terms = [t for t in logic['entities'] if t in self.locked_terms and t.title() not in self.STOPWORDS_SEMANTIC and t.lower() not in self.STOPWORDS_SEMANTIC]
+            
+            # Valuations and Counts
+            for t in valid_window_terms:
+                global_vals[t].append(logic['valuations'][t])
+                global_counts[t] += logic['atom_counts'].get(t, 0)
+                
+            # Field: P(X|Y)
+            m = logic['implication_matrix']
+            for t1 in valid_window_terms:
+                for t2 in valid_window_terms:
+                    p = m.get(t1, {}).get(t2, 0)
+                    if p > 0.1:
+                        # Max-pooling: If any window sees a strong connection, it's global logic
+                        global_field[t1][t2] = max(global_field[t1].get(t2, 0), p)
+
+        # 2. Average Valuations
+        self.final_valuations = {t: sum(v_list)/len(v_list) for t, v_list in global_vals.items()}
+        
+        # 3. Build Final Tree via Global Solver (Aggressive Lower Threshold)
+        solver = AlgebraicTextSolver(p=self.p, lift_threshold=0.2)
+        try:
+            res = solver.solve(self.final_valuations, global_field, global_counts)
+            
+            self.final_vectors = res['coordinates']
+            self.tree_structure = {
+                'tree': res['tree'],
+                'analytic_score': res['analytic_score'],
+                'energy': res['energy']
+            }
+            # Add roots
+            all_children = set()
+            for children in res['tree'].values():
+                all_children.update(children)
+            self.tree_structure['roots'] = [n for n in self.final_vectors if n not in all_children]
+            
+            print(f"       - Global Consolidation Success (Score: {res['analytic_score']:.2f})")
+            print(f"       - Global Roots: {len(self.tree_structure['roots'])}")
+            
+            # DEBUG: Sample some implications
+            print("       - [DEBUG] Top Global Implications:")
+            impls = []
+            for t1, targets in global_field.items():
+                for t2, p in targets.items():
+                    impls.append((p, t1, t2))
+            impls.sort(reverse=True)
+            for p, t1, t2 in impls[:15]:
+                print(f"         {t1} -> {t2} (P = {p:.2f})")
+            
+        except Exception as e:
+            print(f"       ! Global Consolidation Error: {e}")
+            self.final_vectors = {}
+            self.tree_structure = {'tree': {}, 'roots': []}
